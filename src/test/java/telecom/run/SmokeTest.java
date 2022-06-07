@@ -7,6 +7,8 @@ import org.junit.runners.MethodSorters;
 import telecom.pages.Adm;
 import telecom.testconfig.BaseSetings;
 
+import static com.codeborne.selenide.Selenide.open;
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 
@@ -24,12 +26,23 @@ public class SmokeTest extends BaseSetings{
         adm.lkPage().CheckLk1();
 
 
+
+
     }
     @Test
     @DisplayName("Проверка авторизации ЛК1")
     public  void checkLoginLk1() {
         Adm adm =new Adm();
         adm.logInLk1("728 3630378", "KZTelecom2020");
+
+    }
+
+    @Test
+    @DisplayName("Проверка главной страницы")
+    public  void checkMain() {
+        Adm adm =new Adm();
+        open("/");
+        adm.mainPage().CheckHeader();
 
     }
 }

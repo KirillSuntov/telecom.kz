@@ -18,6 +18,9 @@ public class Adm extends BaseSetings {
         return lkPage;
     }
 
-
+    public MainPage mainPage (){
+        MainPage mainPage = new MainPage();
+        return mainPage;
+    }
 
 }
