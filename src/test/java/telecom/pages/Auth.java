@@ -15,11 +15,11 @@ public class Auth extends BaseSetings {
 
 
 
-    @Step("Авторизация в ЛК 2")
+    @Step("РђРІС‚РѕСЂРёР·Р°С†РёСЏ РІ Р›Рљ 2")
     public Auth logInLk2(String login, String password) {
         open("/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
-        $(byText("Вход")).waitUntil(Condition.visible,15000).click();
+        $(byText("Р’С…РѕРґ")).waitUntil(Condition.visible,15000).click();
 
         $(byName("phone")).waitUntil(Condition.visible,15000).setValue(login);
         $(by("type","submit")).waitUntil(Condition.visible,15000).click();
@@ -30,12 +30,12 @@ public class Auth extends BaseSetings {
         return this;
     }
 
-    @Step("Авторизация в ЛК 1")
+    @Step("РђРІС‚РѕСЂРёР·Р°С†РёСЏ РІ Р›Рљ 1")
     public Auth logInLk1(String login, String password) {
         open("/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
-        $(byText("Вход")).waitUntil(Condition.visible,15000).click();
-        $(byText("Вход по городскому номеру")).waitUntil(Condition.visible,15000).click();
+        $(byText("Р’С…РѕРґ")).waitUntil(Condition.visible,15000).click();
+        $(byText("Р’С…РѕРґ РїРѕ РіРѕСЂРѕРґСЃРєРѕРјСѓ РЅРѕРјРµСЂСѓ")).waitUntil(Condition.visible,15000).click();
 
         $(byName("login")).waitUntil(Condition.visible,15000).setValue(login);
 //        $(by("type","submit")).waitUntil(Condition.visible,15000).click();
@@ -47,17 +47,17 @@ public class Auth extends BaseSetings {
     }
 
 //
-//    @Step("Выход из системы")
+//    @Step("Р’С‹С…РѕРґ РёР· СЃРёСЃС‚РµРјС‹")
 //    public Auth logOut() {
 //        $(By.xpath("//*[@class=\"ant-notification-notice-message\"]")).shouldNotBe(Condition.visible);
-//        $(By.xpath("//a/span[text()=\"Выйти из профиля\"]")).click();
-//        $(By.xpath("//a[text()=\"Да\"]")).click();
-//        $(By.xpath("//p[@id=\"kc-page-title\"]")).shouldHave(Condition.text("        Выберите способ авторизации"));
+//        $(By.xpath("//a/span[text()=\"Р’С‹Р№С‚Рё РёР· РїСЂРѕС„РёР»СЏ\"]")).click();
+//        $(By.xpath("//a[text()=\"Р”Р°\"]")).click();
+//        $(By.xpath("//p[@id=\"kc-page-title\"]")).shouldHave(Condition.text("        Р’С‹Р±РµСЂРёС‚Рµ СЃРїРѕСЃРѕР± Р°РІС‚РѕСЂРёР·Р°С†РёРё"));
 //        return this;
 //    }
 //
 //
-//    @Step("Открыть раздел регистрация")
+//    @Step("РћС‚РєСЂС‹С‚СЊ СЂР°Р·РґРµР» СЂРµРіРёСЃС‚СЂР°С†РёСЏ")
 //    public Auth registration() {
 //        closeWebDriver();
 //        open("/");

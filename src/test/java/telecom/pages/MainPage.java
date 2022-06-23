@@ -20,102 +20,102 @@ import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
 
 public class MainPage {
-    @Step("Проверка хедера")
+    @Step("РџСЂРѕРІРµСЂРєР° С…РµРґРµСЂР°")
     public void CheckHeader() {
-        CheckLink("Частным лицам","https://telecom.kz/ru/");
-        CheckLink("Бизнесу","https://telecom.kz/#");
-        CheckLink("О компании","https://telecom.kz/ru/about/list");
-        CheckLink("Инвесторам и акционерам","https://telecom.kz/ru/pages/11893/172452");
-        CheckLink("Контакты","https://telecom.kz/ru/contacts/list");
+        CheckLink("Р§Р°СЃС‚РЅС‹Рј Р»РёС†Р°Рј","https://telecom.kz/ru/");
+        CheckLink("Р‘РёР·РЅРµСЃСѓ","https://telecom.kz/#");
+        CheckLink("Рћ РєРѕРјРїР°РЅРёРё","https://telecom.kz/ru/about/list");
+        CheckLink("РРЅРІРµСЃС‚РѕСЂР°Рј Рё Р°РєС†РёРѕРЅРµСЂР°Рј","https://telecom.kz/ru/pages/11893/172452");
+        CheckLink("РљРѕРЅС‚Р°РєС‚С‹","https://telecom.kz/ru/contacts/list");
 
-        CheckLink("Магазин","https://shop.telecom.kz/?utm_source=websitetelecomkz&utm_medium=shopbutton&utm_campaign=referral&utm_id=telecom");
-        CheckLink("Интернет","https://telecom.kz/ru/common/Ultra-new");
-        CheckLink("Телевидение","https://telecom.kz/ru/common/tvplus");
-        CheckLink("Телефон","https://telecom.kz/ru/common/mobsvyaz-altel");
-        CheckLink("Помощь","https://telecom.kz/ru/knowledge/14");
-        CheckLink("Новые услуги","https://telecom.kz/ru/services/volte");
-        CheckLink("Верификация","https://telecom.kz/ru/services/verification-number");
-        CheckLink("Мобильное приложение","https://telecom.kz/ru/services/mobile");
+        CheckLink("РњР°РіР°Р·РёРЅ","https://shop.telecom.kz/?utm_source=websitetelecomkz&utm_medium=shopbutton&utm_campaign=referral&utm_id=telecom");
+        CheckLink("РРЅС‚РµСЂРЅРµС‚","https://telecom.kz/ru/common/Ultra-new");
+        CheckLink("РўРµР»РµРІРёРґРµРЅРёРµ","https://telecom.kz/ru/common/tvplus");
+        CheckLink("РўРµР»РµС„РѕРЅ","https://telecom.kz/ru/common/mobsvyaz-altel");
+        CheckLink("РџРѕРјРѕС‰СЊ","https://telecom.kz/ru/knowledge/14");
+        CheckLink("РќРѕРІС‹Рµ СѓСЃР»СѓРіРё","https://telecom.kz/ru/services/volte");
+        CheckLink("Р’РµСЂРёС„РёРєР°С†РёСЏ","https://telecom.kz/ru/services/verification-number");
+        CheckLink("РњРѕР±РёР»СЊРЅРѕРµ РїСЂРёР»РѕР¶РµРЅРёРµ","https://telecom.kz/ru/services/mobile");
 
 
     }
 
-    @Step("Проверка футера")
+    @Step("РџСЂРѕРІРµСЂРєР° С„СѓС‚РµСЂР°")
     public void CheckFooter() {
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Интернет")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Телевидение")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Телефон")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Новые услуги")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Помощь")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Личный кабинет")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Хостинг")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("РРЅС‚РµСЂРЅРµС‚")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("РўРµР»РµРІРёРґРµРЅРёРµ")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("РўРµР»РµС„РѕРЅ")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("РќРѕРІС‹Рµ СѓСЃР»СѓРіРё")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("РџРѕРјРѕС‰СЊ")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Р›РёС‡РЅС‹Р№ РєР°Р±РёРЅРµС‚")).scrollTo().getAttribute("href"));
+        System.out.println("РРЅС‚РµСЂРЅРµС‚ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("РҐРѕСЃС‚РёРЅРі")).scrollTo().getAttribute("href"));
 
         System.out.println(" ");
 
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Unibox")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Интернет")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Телефония")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Телевидение")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Видеонаблюдение")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Wi-Fi Target")).scrollTo().getAttribute("href"));
-//        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Gamer")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("IoT Интернет вещей")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Блокчейн")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Операторам")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Unibox")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("РРЅС‚РµСЂРЅРµС‚")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("РўРµР»РµС„РѕРЅРёСЏ")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("РўРµР»РµРІРёРґРµРЅРёРµ")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Р’РёРґРµРѕРЅР°Р±Р»СЋРґРµРЅРёРµ")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Wi-Fi Target")).scrollTo().getAttribute("href"));
+//        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Gamer")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("IoT РРЅС‚РµСЂРЅРµС‚ РІРµС‰РµР№")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Р‘Р»РѕРєС‡РµР№РЅ")).scrollTo().getAttribute("href"));
+        System.out.println("Р‘РёР·РЅРµСЃСѓ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("РћРїРµСЂР°С‚РѕСЂР°Рј")).scrollTo().getAttribute("href"));
 
         System.out.println(" ");
 
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Новости компании")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Новости телевидения")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Публикации")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Видеоархив")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Фотоархив")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Операторам связи")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Оповещения о проведении технических работ")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Контакты для СМИ")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("РќРѕРІРѕСЃС‚Рё РєРѕРјРїР°РЅРёРё")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("РќРѕРІРѕСЃС‚Рё С‚РµР»РµРІРёРґРµРЅРёСЏ")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("РџСѓР±Р»РёРєР°С†РёРё")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Р’РёРґРµРѕР°СЂС…РёРІ")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Р¤РѕС‚РѕР°СЂС…РёРІ")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("РћРїРµСЂР°С‚РѕСЂР°Рј СЃРІСЏР·Рё")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("РћРїРѕРІРµС‰РµРЅРёСЏ Рѕ РїСЂРѕРІРµРґРµРЅРёРё С‚РµС…РЅРёС‡РµСЃРєРёС… СЂР°Р±РѕС‚")).scrollTo().getAttribute("href"));
+        System.out.println("РџСЂРµСЃСЃ С†РµРЅС‚СЂ "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("РљРѕРЅС‚Р°РєС‚С‹ РґР»СЏ РЎРњР")).scrollTo().getAttribute("href"));
 
         System.out.println(" ");
 
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("О компании")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("О нас")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Бизнес")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Кадровая политика")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Инвесторам и акционерам")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Комплаенс")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Контакты")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Закупки")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Аукционы")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Архив")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Рћ РєРѕРјРїР°РЅРёРё")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Рћ РЅР°СЃ")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Р‘РёР·РЅРµСЃ")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("РљР°РґСЂРѕРІР°СЏ РїРѕР»РёС‚РёРєР°")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("РРЅРІРµСЃС‚РѕСЂР°Рј Рё Р°РєС†РёРѕРЅРµСЂР°Рј")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("РљРѕРјРїР»Р°РµРЅСЃ")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("РљРѕРЅС‚Р°РєС‚С‹")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Р—Р°РєСѓРїРєРё")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("РђСѓРєС†РёРѕРЅС‹")).scrollTo().getAttribute("href"));
+        System.out.println("Рћ РєРѕРјРїР°РЅРёРё "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("РђСЂС…РёРІ")).scrollTo().getAttribute("href"));
 
         System.out.println(" ");
 
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("База знаний")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Бланки и документы")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Справочник")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Контакты и адреса")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Публичный договор")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Типовой договор для ЮЛ и ИП")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Сертификат безопасности")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Р‘Р°Р·Р° Р·РЅР°РЅРёР№")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Р‘Р»Р°РЅРєРё Рё РґРѕРєСѓРјРµРЅС‚С‹")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("РЎРїСЂР°РІРѕС‡РЅРёРє")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("РљРѕРЅС‚Р°РєС‚С‹ Рё Р°РґСЂРµСЃР°")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("РџСѓР±Р»РёС‡РЅС‹Р№ РґРѕРіРѕРІРѕСЂ")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("РўРёРїРѕРІРѕР№ РґРѕРіРѕРІРѕСЂ РґР»СЏ Р®Р› Рё РРџ")).scrollTo().getAttribute("href"));
+        System.out.println("РџРѕРјРѕС‰СЊ Рё РїРѕРґРґРµСЂР¶РєР° "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("РЎРµСЂС‚РёС„РёРєР°С‚ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё")).scrollTo().getAttribute("href"));
 
 
     }
 
-    @Step("Проверка ссылки {0}")
+    @Step("РџСЂРѕРІРµСЂРєР° СЃСЃС‹Р»РєРё {0}")
     public void CheckLink(String elementText, String href) {
         if ($(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
             System.out.println("ok "+$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
         } else {
-            Assert.fail("Ссылка не соответствует");
+            Assert.fail("РЎСЃС‹Р»РєР° РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚");
         }
     }
 
 
-    @Step("Проверка ссылки Footer {0}")
+    @Step("РџСЂРѕРІРµСЂРєР° СЃСЃС‹Р»РєРё Footer {0}")
     public void CheckLinkFooter(String elementText, String href, Integer g) {
         if ($(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
             System.out.println("ok "+$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
         } else {
-            Assert.fail("Ссылка не соответствует");
+            Assert.fail("РЎСЃС‹Р»РєР° РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚");
         }
     }
 
