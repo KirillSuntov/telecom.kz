@@ -35,7 +35,7 @@ public class MainPage {
         CheckLink("Помощь","https://telecom.kz/ru/knowledge/14");
         CheckLink("Новые услуги","https://telecom.kz/ru/services/volte");
         CheckLink("Верификация","https://telecom.kz/ru/services/verification-number");
-        CheckLink("Мобильное приложение","https://telecom.kz/ru/services/mobile");
+        CheckLink("Мобильное приложение","https://telecom.kz/ru/services/mobile") ;
 
 
     }
