@@ -42,61 +42,59 @@ public class MainPage {
 
     @Step("Проверка футера")
     public void CheckFooter() {
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Интернет")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Телевидение")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Телефон")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Новые услуги")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Помощь")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Личный кабинет")).scrollTo().getAttribute("href"));
-        System.out.println("Интернет "+$(byClassName("footer")).$$(byClassName("footer-list")).get(0).$(withText("Хостинг")).scrollTo().getAttribute("href"));
+        CheckLinkFooter("Интернет","https://telecom.kz/ru/common/Ultra-new",0);
+        CheckLinkFooter("Телевидение","https://telecom.kz/ru/common/id-tv",0);
+        CheckLinkFooter("Телефон","https://telecom.kz/ru/common/vugodnaya-mobil-svyazi",0);
+        CheckLinkFooter("Новые услуги","https://telecom.kz/ru/services/cctv-home",0);
+        CheckLinkFooter("Помощь","https://telecom.kz/ru/knowledge/14",0);
+        CheckLinkFooter("Личный кабинет","https://telecom.kz/customer/auth/login",0);
+        CheckLinkFooter("Хостинг","http://idhost.kz/",0);
 
         System.out.println(" ");
 
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Unibox")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Интернет")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Телефония")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Телевидение")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Видеонаблюдение")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Wi-Fi Target")).scrollTo().getAttribute("href"));
-//        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Gamer")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("IoT Интернет вещей")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Блокчейн")).scrollTo().getAttribute("href"));
-        System.out.println("Бизнесу "+$(byClassName("footer")).$$(byClassName("footer-list")).get(1).$(withText("Операторам")).scrollTo().getAttribute("href"));
+        CheckLinkFooter("Unibox","https://www.ismet.kz/ru/services/service-3762-unibox",1);
+        CheckLinkFooter("Интернет","https://www.ismet.kz/ru/services/service-3349-Internetdlyaofisa",1);
+        CheckLinkFooter("Телефония","https://www.ismet.kz/ru/services/service-3717-siptelefonija.html",1);
+        CheckLinkFooter("Телевидение","https://www.ismet.kz/ru/services/service-3353-id_tvdljaofisa",1);
+        CheckLinkFooter("Видеонаблюдение","https://www.ismet.kz/ru/documents/cctv",1);
+        CheckLinkFooter("Wi-Fi Target","https://www.ismet.kz/ru/documents/wi-fi-target",1);
+        CheckLinkFooter("IoT Интернет вещей","https://www.ismet.kz/ru/documents/IoT",1);
+        CheckLinkFooter("Блокчейн","https://www.ismet.kz/ru/documents/blockchain",1);
+        CheckLinkFooter("Операторам","https://telecom.kz/ru/operators/12219/172065",1);
 
         System.out.println(" ");
 
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Новости компании")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Новости телевидения")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Публикации")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Видеоархив")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Фотоархив")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Операторам связи")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Оповещения о проведении технических работ")).scrollTo().getAttribute("href"));
-        System.out.println("Пресс центр "+$(byClassName("footer")).$$(byClassName("footer-list")).get(2).$(withText("Контакты для СМИ")).scrollTo().getAttribute("href"));
+        CheckLinkFooter("Новости компании","https://telecom.kz/ru/news/list/1?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Новости телевидения","https://telecom.kz/ru/news/list/11?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Публикации","https://telecom.kz/ru/news/list/3?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Видеоархив","https://telecom.kz/ru/news/list/6?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Фотоархив","https://telecom.kz/ru/news/list/7?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Операторам связи","https://telecom.kz/ru/news/list/9?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Оповещения о проведении технических работ","https://telecom.kz/ru/news/list/12?utm_source=footer&utm_medium=org&utm_campaign=newlink",2);
+        CheckLinkFooter("Контакты для СМИ","https://telecom.kz/ru/pages/11853/171985",2);
 
         System.out.println(" ");
 
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("О компании")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("О нас")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Бизнес")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Кадровая политика")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Инвесторам и акционерам")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Комплаенс")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Контакты")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Закупки")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Аукционы")).scrollTo().getAttribute("href"));
-        System.out.println("О компании "+$(byClassName("footer")).$$(byClassName("footer-list")).get(3).$(withText("Архив")).scrollTo().getAttribute("href"));
+        CheckLinkFooter("О компании","https://telecom.kz/ru/about/list?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("О нас","https://telecom.kz/ru/pages/12090/171731?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Бизнес","https://telecom.kz/ru/pages/11843/160211?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Кадровая политика","https://telecom.kz/ru/pages/11859/172331?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Инвесторам и акционерам","https://telecom.kz/ru/pages/11893/172452?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Комплаенс","https://telecom.kz/ru/pages/13695/172465?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Контакты","https://telecom.kz/ru/contacts/list",3);
+        CheckLinkFooter("Закупки","https://telecom.kz/ru/purchases?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Аукционы","https://telecom.kz/ru/auction?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
+        CheckLinkFooter("Архив","https://telecom.kz/ru/pages/12463/172279?utm_source=footer&utm_medium=org&utm_campaign=newlink",3);
 
         System.out.println(" ");
 
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("База знаний")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Бланки и документы")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Справочник")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Контакты и адреса")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Публичный договор")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Типовой договор для ЮЛ и ИП")).scrollTo().getAttribute("href"));
-        System.out.println("Помощь и поддержка "+$(byClassName("footer")).$$(byClassName("footer-list")).get(4).$(withText("Сертификат безопасности")).scrollTo().getAttribute("href"));
-
+        CheckLinkFooter("База знаний","https://telecom.kz/ru/knowledge/14?utm_source=footer&utm_medium=org&utm_campaign=newlink",4);
+        CheckLinkFooter("Бланки и документы","https://telecom.kz/ru/knowledge/13?utm_source=footer&utm_medium=org&utm_campaign=newlink",4);
+        CheckLinkFooter("Справочник","https://telecom.kz/ru/catalog/11590/171757?utm_source=footer&utm_medium=org&utm_campaign=newlink",4);
+        CheckLinkFooter("Контакты и адреса","https://telecom.kz/ru/pages/12263/172099?utm_source=footer&utm_medium=org&utm_campaign=newlink",4);
+        CheckLinkFooter("Публичный договор","https://telecom.kz/ru/publications/172460?utm_source=footer&utm_medium=org&utm_campaign=newlink",4);
+        CheckLinkFooter("Договора для ИП и ЮЛ","https://telecom.kz/ru/publication/172456",4);
+        CheckLinkFooter("Сертификат безопасности","https://telecom.kz/ru/publication/172469",4);
 
     }
 
@@ -113,7 +111,7 @@ public class MainPage {
     @Step("Проверка ссылки Footer {0}")
     public void CheckLinkFooter(String elementText, String href, Integer g) {
         if ($(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
-            System.out.println("ok "+$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
+            System.out.println("ok2 "+$(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
         } else {
             Assert.fail("Ссылка не соответствует");
         }

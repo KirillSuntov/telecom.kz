@@ -43,6 +43,7 @@ public class SmokeTest extends BaseSetings{
         Adm adm =new Adm();
         open("/");
         adm.mainPage().CheckHeader();
+        adm.mainPage().CheckFooter();
 
     }
 }
