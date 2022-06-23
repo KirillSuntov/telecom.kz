@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" addBOMForNewFiles="with BOM">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with BOM">
+    <file url="file://$PROJECT_DIR$/src/test/java/telecom/pages/Adm.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/test/java/telecom/pages/Auth.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/test/java/telecom/pages/LKPage.java" charset="windows-1251" />
     <file url="file://$PROJECT_DIR$/src/test/java/telecom/pages/MainPage.java" charset="windows-1251" />
-    <file url="PROJECT" charset="UTF-16" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
