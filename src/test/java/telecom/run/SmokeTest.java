@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class SmokeTest extends BaseSetings {
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка авторизации ЛК2")
     public void checkLoginLk2() {
         Adm adm = new Adm();
@@ -25,7 +25,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка авторизации ЛК1")
     public void checkLoginLk1() {
         Adm adm = new Adm();
@@ -33,7 +33,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка главной страницы")
     public void checkMain() {
         Adm adm = new Adm();
