@@ -12,8 +12,7 @@ import org.openqa.selenium.By;
 import telecom.testconfig.BaseSetings;
 //import sapasoft.reg.testconfigs.BaseSetings;
 
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
@@ -34,7 +33,7 @@ public class MainPage {
         CheckLink("Телефон","https://telecom.kz/ru/common/mobsvyaz-altel");
         CheckLink("Помощь","https://telecom.kz/ru/knowledge/14");
         CheckLink("Новые услуги","https://telecom.kz/ru/services/volte");
-        CheckLink("Верификация","https://telecom.kz/ru/services/verification-number");
+//        CheckLink("Верификация","https://telecom.kz/ru/services/verification-number");
         CheckLink("Мобильное приложение","https://telecom.kz/ru/services/mobile") ;
 
 
@@ -100,21 +99,26 @@ public class MainPage {
 
     @Step("Проверка ссылки {0}")
     public void CheckLink(String elementText, String href) {
-        if ($(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
-            System.out.println("ok "+$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
-        } else {
-            Assert.fail("Ссылка не соответствует");
-        }
+        $(withText(elementText)).shouldHave(attribute("href", href));
+
+
+//        if ($(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
+//            System.out.println("ok "+$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
+//        } else {
+//            Assert.fail("Ссылка не соответствует");
+//        }
     }
 
 
     @Step("Проверка ссылки Footer {0}")
     public void CheckLinkFooter(String elementText, String href, Integer g) {
-        if ($(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
-            System.out.println("ok2 "+$(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
-        } else {
-            Assert.fail("Ссылка не соответствует");
-        }
+        $(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().shouldHave(attribute("href", href));
+
+//        if ($(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href)) {
+//            System.out.println("ok2 "+$(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().getAttribute("href").equals(href));
+//        } else {
+//            Assert.fail("Ссылка не соответствует");
+//        }
     }
 
 
