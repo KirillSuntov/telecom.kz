@@ -12,38 +12,44 @@ import static com.codeborne.selenide.Selenide.open;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 
 
+public class SmokeTest extends BaseSetings {
 
 
-
-public class SmokeTest extends BaseSetings{
-
-
-    @Test
+//    @Test
     @DisplayName("Проверка авторизации ЛК2")
-    public  void checkLoginLk2() {
-        Adm adm =new Adm();
+    public void checkLoginLk2() {
+        Adm adm = new Adm();
         adm.logInLk2(login, password);
         adm.lkPage().CheckLk1();
 
 
-
-
     }
-    @Test
+
+//    @Test
     @DisplayName("Проверка авторизации ЛК1")
-    public  void checkLoginLk1() {
-        Adm adm =new Adm();
+    public void checkLoginLk1() {
+        Adm adm = new Adm();
         adm.logInLk1("728 3630378", "KZTelecom2020");
 
     }
 
-    @Test
+//    @Test
     @DisplayName("Проверка главной страницы")
-    public  void checkMain() {
-        Adm adm =new Adm();
+    public void checkMain() {
+        Adm adm = new Adm();
         open("/");
         adm.mainPage().CheckHeader();
         adm.mainPage().CheckFooter();
+    }
+
+
+    @Test
+    @DisplayName("Проверка страницы мобильного приложения")
+    public void checkMobile() {
+        Adm adm = new Adm();
+        open("/");
+        adm.mobilePage().CheckBody();
 
     }
+
 }

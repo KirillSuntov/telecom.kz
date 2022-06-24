@@ -19,6 +19,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
 
 public class MainPage {
+
+
     @Step("Проверка хедера")
     public void CheckHeader() {
         CheckLink("Частным лицам","https://telecom.kz/ru/");

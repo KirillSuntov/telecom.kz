@@ -23,4 +23,9 @@ public class Adm extends BaseSetings {
         return mainPage;
     }
 
+    public MobilePage mobilePage (){
+        MobilePage mobilePage = new MobilePage();
+        return mobilePage;
+    }
+
 }
