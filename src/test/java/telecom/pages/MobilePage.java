@@ -22,22 +22,25 @@ public class MobilePage {
         $(withText("Мобильное приложение")).click();
         pause(5000);
         CheckImg("mobile__convenient","img/main/mobile/convenient_image.webp");
+        CheckImg("mobile__balance","img/main/mobile/balance_image.webp");
+        CheckImg("mobile__questions","img/main/mobile/questions__image.webp");
+
 
     }
 
-
+    @Step("Проверка изображения {0}")
     public void CheckImg(String className, String srcUrl) {
 
         System.out.println($(byClassName(className)).$(byTagName("img")).getAttribute("src"));
         if ( $(byClassName(className)).$(byTagName("img")).getAttribute("src").equals("https://telecom.kz/"+srcUrl)){
-            System.out.println("Корректная ссылка на изображение");
+//            System.out.println("Корректная ссылка на изображение");
         }
         else{
             Assert.fail("Изменена ссылка на изображение");
         }
 
         if ($(byClassName(className)).$(byTagName("img")).getSize().height>100){
-            System.out.println("Изображение отображается");
+//            System.out.println("Изображение отображается");
         }
         else{
             Assert.fail("Изображение не отображается");
