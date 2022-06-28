@@ -24,14 +24,12 @@ public class MobilePage {
         CheckImg("mobile__convenient","img/main/mobile/convenient_image.webp");
         CheckImg("mobile__balance","img/main/mobile/balance_image.webp");
         CheckImg("mobile__questions","img/main/mobile/questions__image.webp");
-
-
-        CheckDownloadLinks(" "," ") ;
+        CheckDownloadLinks() ;
 
     }
 
-    @Step("Проверка ссылок наа сторы")
-    public void CheckDownloadLinks(String className, String srcUrl) {
+    @Step("Проверка ссылок на сторы")
+    public void CheckDownloadLinks() {
 
 //        System.out.println($(byId("downloadLinks")).$(byTagName("img")).getAttribute("alt"));
        $(byId("downloadLinks")).$(byTagName("img")).getAttribute("src").equals("img/main/mobile/google_play.svg");

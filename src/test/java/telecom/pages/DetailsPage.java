@@ -1,0 +1,51 @@
+package telecom.pages;
+
+import io.qameta.allure.Step;
+import org.junit.Assert;
+import telecom.testconfig.BaseSetings;
+
+
+import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.selector.ByAttribute;
+import io.qameta.allure.Step;
+import org.openqa.selenium.By;
+import telecom.testconfig.BaseSetings;
+//import sapasoft.reg.testconfigs.BaseSetings;
+
+import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.*;
+import static telecom.testconfig.BaseSetings.pause;
+
+public class DetailsPage {
+
+
+    public void CheckDetails() {
+        $$(byClassName("kt-nav__link")).find(text("Детализация")).click();
+        CheckMobileDetails();
+    }
+
+
+    @Step("Проверка детализации по мобильной связи")
+    public void CheckMobileDetails() {
+//        pause(5000);
+        $$(byAttribute("role", "presentation")).get(2).click();
+        $(byId("number")).selectOption(0);
+
+        $$(byAttribute("type", "submit")).find(text("30 дней")).click();
+        pause(5000);
+
+        Checkaltelinfo();
+
+    }
+
+    @Step("Проверка остатока ресурсов в рамках тарифного плана")
+    public void Checkaltelinfo(){
+        if ($$(byClassName("detailsPage__altel__info")).size() < 2) {
+            Assert.fail("Остаток ресурсов в рамках тарифного плана не отобразился");
+        }
+
+    }
+
+}

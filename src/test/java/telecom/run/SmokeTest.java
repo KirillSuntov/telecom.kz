@@ -52,4 +52,15 @@ public class SmokeTest extends BaseSetings {
 
     }
 
+    @Test
+    @DisplayName("Проверка страницы детализации")
+    public void checkDetails() {
+        Adm adm = new Adm();
+        open("/");
+        adm.logInLk2(login, password);
+//        adm.lkPage().CheckLk1();
+//
+        adm.detailsPage().CheckDetails();
+    }
+
 }

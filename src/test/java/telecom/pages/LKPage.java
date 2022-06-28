@@ -26,7 +26,6 @@ public class LKPage extends BaseSetings {
         $(byClassName("bigBlueThing__details__tariff")).shouldHave(exactText("Тарифный план\n" +"Silver 3SM"));
         $(byClassName("bigBlueThing__details__address")).shouldHave(exactText(" Адрес подключения:\n" +
                 "Нур-Султан, ул. Ж.ТАШЕНОВА, д. 8 , кв. 129"));
-
         System.out.println($(byClassName("bigBlueThing__details__tariff")).getText());
         System.out.println($(byClassName("bigBlueThing__details__address")).getText());
 

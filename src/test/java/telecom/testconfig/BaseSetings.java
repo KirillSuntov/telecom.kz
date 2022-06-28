@@ -45,7 +45,7 @@ public class BaseSetings {
         Configuration.baseUrl = "https://telecom.kz/ru/";
         Configuration.timeout= 8000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 
