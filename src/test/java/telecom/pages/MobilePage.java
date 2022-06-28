@@ -26,6 +26,30 @@ public class MobilePage {
         CheckImg("mobile__questions","img/main/mobile/questions__image.webp");
 
 
+        CheckDownloadLinks(" "," ") ;
+
+    }
+
+    @Step("Проверка ссылок наа сторы")
+    public void CheckDownloadLinks(String className, String srcUrl) {
+
+//        System.out.println($(byId("downloadLinks")).$(byTagName("img")).getAttribute("alt"));
+       $(byId("downloadLinks")).$(byTagName("img")).getAttribute("src").equals("img/main/mobile/google_play.svg");
+        $(byId("downloadLinks")).$(byTagName("img")).getAttribute("alt").equals("google_play");
+        if ($(byId("downloadLinks")).$(byTagName("img")).getSize().height<50){
+            Assert.fail("Изображение не отображается");
+        }
+//        $(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().shouldHave(attribute("href", href));
+        $(byId("downloadLinks")).$$(byAttribute("target","_blank")).get(0).shouldHave(attribute("href", "https://play.google.com/store/apps/details?id=kz.telecom.app"));
+
+        $(byId("downloadLinks")).$$(byTagName("img")).get(1).getAttribute("src").equals("img/main/mobile/app_store.svg");
+        $(byId("downloadLinks")).$$(byTagName("img")).get(1).getAttribute("alt").equals("app_store");
+        if ($(byId("downloadLinks")).$$(byTagName("img")).get(1).getSize().height<50){
+            Assert.fail("Изображение не отображается");
+        }
+        $(byId("downloadLinks")).$$(byAttribute("target","_blank")).get(1).shouldHave(attribute("href", "https://apps.apple.com/kz/app/telecom-kz/id1545816005"));
+
+
     }
 
     @Step("Проверка изображения {0}")
