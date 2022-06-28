@@ -27,20 +27,35 @@ public class DetailsPage {
     }
 
 
-    @Step("Проверка детализации по мобильной связи")
+    @Step("Проверка детализации - мобильная связь")
     public void CheckMobileDetails() {
 //        pause(5000);
         $$(byAttribute("role", "presentation")).get(2).click();
         $(byId("number")).selectOption(0);
 
         $$(byAttribute("type", "submit")).find(text("30 дней")).click();
-        pause(5000);
-
+        pause(1000);
+        if ($$(byClassName("table-detailing-date")).size() < 2) {
+            Assert.fail("Детализация не отобразилась");
+        }
         Checkaltelinfo();
+    }
+
+    @Step("Проверка детализации - интернет")
+    public void CheckInternetDetails() {
+        $$(byAttribute("role", "presentation")).get(0).click();
+        $$(byAttribute("type", "submit")).find(text("Показать")).click();
 
     }
 
-    @Step("Проверка остатока ресурсов в рамках тарифного плана")
+    @Step("Проверка детализации - Городская связь")
+    public void CheckTelephonyDetails() {
+        $$(byAttribute("role", "presentation")).get(1).click();
+        $$(byAttribute("type", "submit")).find(text("Показать")).click();
+
+    }
+
+    @Step("Проверка остатка ресурсов в рамках тарифного плана")
     public void Checkaltelinfo(){
         if ($$(byClassName("detailsPage__altel__info")).size() < 2) {
             Assert.fail("Остаток ресурсов в рамках тарифного плана не отобразился");
