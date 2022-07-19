@@ -14,6 +14,7 @@ import telecom.testconfig.BaseSetings;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
 
@@ -54,7 +55,8 @@ public class MobilePage {
     public void CheckImg(String className, String srcUrl) {
 
         System.out.println($(byClassName(className)).$(byTagName("img")).getAttribute("src"));
-        if ( $(byClassName(className)).$(byTagName("img")).getAttribute("src").equals("https://telecom.kz/"+srcUrl)){
+
+        if ( $(byClassName(className)).$(byTagName("img")).getAttribute("src").equals(baseUrl+srcUrl)){
 //            System.out.println("Корректная ссылка на изображение");
         }
         else{

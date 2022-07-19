@@ -13,24 +13,30 @@ public class Adm extends BaseSetings {
 
 
 
-    public LKPage lkPage (){
+    public LKPage lkPage(){
         LKPage lkPage = new LKPage();
         return lkPage;
     }
 
-    public MainPage mainPage (){
+    public MainPage mainPage(){
         MainPage mainPage = new MainPage();
         return mainPage;
     }
 
-    public MobilePage mobilePage (){
+    public MobilePage mobilePage(){
         MobilePage mobilePage = new MobilePage();
         return mobilePage;
     }
 
-    public DetailsPage detailsPage  (){
+    public DetailsPage detailsPage(){
         DetailsPage detailsPage = new DetailsPage();
         return detailsPage;
     }
+
+    public CctvhomePage cctvhomePage(){
+        CctvhomePage cctvhomePage = new CctvhomePage();
+        return cctvhomePage;
+    }
+
 
 }
