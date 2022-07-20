@@ -38,5 +38,10 @@ public class Adm extends BaseSetings {
         return cctvhomePage;
     }
 
+    public PaymentPage paymentPage(){
+        PaymentPage paymentPage = new PaymentPage();
+        return paymentPage;
+    }
+
 
 }
