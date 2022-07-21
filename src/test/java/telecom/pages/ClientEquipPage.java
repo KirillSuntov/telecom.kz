@@ -35,7 +35,7 @@ public class ClientEquipPage {
     public void tabCheck(String tabName) {
 
         $(byText(tabName)).click();
-
+        $$(byClassName("rent-card__item")).filter(visible).size();
         if ($$(byClassName("rent-card__item")).filter(visible).size() < 1) {
             Assert.fail("Карточки товаров не отобразились");
         }
