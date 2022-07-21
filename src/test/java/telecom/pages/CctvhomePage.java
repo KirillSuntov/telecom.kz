@@ -34,7 +34,7 @@ public class CctvhomePage {
     public  void submitButton() {
         $$(byAttribute("type","submit")).last().click();
         pause(500);
-        $(By.id("phone_number")).setValue("777777777777");
+        $(By.id("phone_number")).setValue("777777787778");
         $(By.id("initial_phone_input_submit_button")).click();
         $$(byClassName("videowatch__buttons")).last().$(byTagName("button")).click();
         pause(500);
