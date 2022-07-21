@@ -23,6 +23,8 @@ public class ContactsPage {
     public void CheckBody() {
         open("contacts/list");
         tabOffice();
+        tabСenter();
+        tabFilials();
     }
 
     @Step("Проверка раздела офисы обслуживания")
@@ -57,6 +59,25 @@ public class ContactsPage {
         if ($$(byClassName("contacts__adress")).size() < 1) {
             Assert.fail("Адреса офисов не отобразились");
         }
+    }
+
+    @Step("Проверка раздела \"Контакт центр\"")
+    public void tabСenter() {
+        open("contacts/center");
+
+        $$(byClassName("contacts__center__number")).get(0).shouldHave(text("160"));
+        $$(byClassName("contacts__center__number")).get(1).shouldHave(text("165"));
+        $$(byClassName("contacts__center__number")).get(2).shouldHave(text("195"));
 
     }
+
+    @Step("Проверка раздела \"Контакты филиалов \"")
+    public void tabFilials() {
+        open("contacts/filials");
+        if ($$(byClassName("contacts__filials__title")).size() < 1) {
+            Assert.fail("Контакты филиалов не отобразились");
+        }
+
+    }
+
 }
