@@ -85,7 +85,7 @@ public class SmokeTest extends BaseSetings {
     }
 
     @Test
-    @DisplayName("Проверка возможности оплаты через главную страницу (без подтверждения оплаты)")
+    @DisplayName("Проверка возможности оплаты через ЛК (без подтверждения оплаты)")
     public void LKpayPage() {
         Adm adm = new Adm();
         adm.logInLk2(login, password);
