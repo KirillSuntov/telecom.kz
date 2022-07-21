@@ -22,8 +22,8 @@ import static telecom.testconfig.BaseSetings.pause;
 public class ContactsPage {
     public void CheckBody() {
         open("contacts/list");
-        tabOffice();
-        tabСenter();
+//        tabOffice();
+//        tabСenter();
         tabFilials();
     }
 
@@ -74,7 +74,8 @@ public class ContactsPage {
     @Step("Проверка раздела \"Контакты филиалов \"")
     public void tabFilials() {
         open("contacts/filials");
-        if ($$(byClassName("contacts__filials__title")).size() < 1) {
+        pause(2000);
+        if ($$(byClassName("contacts__filials__item")).size() < 1) {
             Assert.fail("Контакты филиалов не отобразились");
         }
 
