@@ -26,9 +26,16 @@ public class PaymentPage {
     public void Payment() {
         LSForm();
         KT_Pay();
-        pause(5000);
+        pause(2000);
         TlForm();
         KT_Pay();
+    }
+
+    @Step("Переход на страницу оплаты")
+    public void PaymentLK() {
+        LKForm();
+        KT_Pay();
+        pause(2000);
     }
 
     @Step("Переход на оплату по номеру телефона")
@@ -75,6 +82,20 @@ public class PaymentPage {
 //        pause(1000);
     }
 
+    @Step("Переход на оплату из ЛК2")
+    public void LKForm() {
+        if ($(byName("amount")).getValue().length()>1){
+            System.out.println($(byName("amount")).getValue().length());
+        }
+        else{
+            Assert.fail("Сумма оплаты не подтянулась");
+        }
+        $(byName("amount")).clear();
+        $(byName("amount")).setValue("100");
+        $(byClassName("bigBlueThing__payment")).$(byTagName("button")).click();
+
+    }
+
     @Step("Заполнение и проверка данных в KT-Pay")
     public void KT_Pay() {
         switchTo().innerFrame("iframe_widget","iframe_widget"); //переключаемся на виджет оплаты
@@ -92,4 +113,6 @@ public class PaymentPage {
 //        pause(1000);
 
     }
+
+
 }

@@ -22,7 +22,8 @@ public class SmokeTest extends BaseSetings {
         adm.mainPage().CheckHeader();
         adm.mainPage().CheckFooter();
     }
-//
+
+    //
     @Test
     @DisplayName("Проверка авторизации ЛК2")
     public void checkLoginLk2() {
@@ -77,11 +78,29 @@ public class SmokeTest extends BaseSetings {
     }
 
     @Test
-    @DisplayName("Проверка возможности оплаты через главную страницу (без подтверждения оплаты)")
+    @DisplayName("Проверка возможности оплаты через неавторизованную зону (без подтверждения оплаты)")
     public void payPage() {
         Adm adm = new Adm();
-
         adm.paymentPage().Payment();
     }
+
+    @Test
+    @DisplayName("Проверка возможности оплаты через главную страницу (без подтверждения оплаты)")
+    public void LKpayPage() {
+        Adm adm = new Adm();
+        adm.logInLk2(login, password);
+        pause(10000);
+        adm.paymentPage().PaymentLK();
+    }
+
+
+    @Test
+    @DisplayName("Проверка онлайн каналов связи")
+    public void checkMainOnlineCommunications() {
+        Adm adm = new Adm();
+        open("/");
+        adm.mainPage().CheckOnlineCommunications();
+    }
+
 
 }
