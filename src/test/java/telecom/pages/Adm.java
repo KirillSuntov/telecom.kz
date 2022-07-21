@@ -43,5 +43,9 @@ public class Adm extends BaseSetings {
         return paymentPage;
     }
 
+    public TechnicalCheckPage technicalCheckPage(){
+        TechnicalCheckPage technicalCheckPage = new TechnicalCheckPage();
+        return technicalCheckPage;
+    }
 
 }

@@ -13,7 +13,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 
 public class SmokeTest extends BaseSetings {
-
+//
     @Test
     @DisplayName("Доступность портала")
     public void checMainPage() {
@@ -102,5 +102,13 @@ public class SmokeTest extends BaseSetings {
         adm.mainPage().CheckOnlineCommunications();
     }
 
+    @Test
+    @DisplayName("Проверка технической возможности подключения")
+    public void checkTechnicalCheck() {
+        Adm adm = new Adm();
+        open("/");
+        adm.technicalCheckPage().CheckBody();
+        pause(5000);
+    }
 
 }
