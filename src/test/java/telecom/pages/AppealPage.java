@@ -23,8 +23,28 @@ import static telecom.testconfig.BaseSetings.pause;
 public class AppealPage {
 
     public void CheckBody() {
-        open("customer/help/form");
+//        open("customer/orders/histories/communications");
 
 
+        SendAppeal("Качество обслуживания");
+        SendAppeal("Вопросы по начислениям");
+        SendAppeal("Качество основных услуг");
     }
+
+    @Step("Создание обращения с типом {0}")
+    public void SendAppeal(String typeAppeal) {
+//        open("customer/orders/histories/communications");
+        $(byText("Мои обращения")).click();
+        $(byText("Создать обращение")).click();
+        $(byText(typeAppeal)).click();
+        if ($(byId("service")).isDisplayed()){
+            $(byId("service")).selectOption(0);
+            $(byId("reason")).selectOption(0);
+        }
+        $(byTagName("textarea")).setValue("автоматическая тестовая заявка, звонить не требуется");
+        $(by("type","submit")).click();
+        pause(1000);
+        $(byText("Ваше обращение принято")).click();
+    }
+
 }

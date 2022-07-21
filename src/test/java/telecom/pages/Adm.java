@@ -57,4 +57,9 @@ public class Adm extends BaseSetings {
         ContactsPage contactsPage = new ContactsPage();
         return contactsPage;
     }
+
+    public AppealPage appealPage(){
+        AppealPage appealPage = new AppealPage();
+        return appealPage;
+    }
 }
