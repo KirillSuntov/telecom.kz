@@ -112,12 +112,21 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-    @Test
+//    @Test
     @DisplayName("Проверка страницы клиенсткого оборудования")
     public void checkClientEquip() {
         Adm adm = new Adm();
         open("/");
         adm.clientEquipPage().CheckBody();
+        pause(5000);
+    }
+
+    @Test
+    @DisplayName("Проверка страницы контакты")
+    public void checkContacts() {
+        Adm adm = new Adm();
+        open("/");
+        adm.contactsPage().CheckBody();
         pause(5000);
     }
 

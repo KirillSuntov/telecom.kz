@@ -53,4 +53,8 @@ public class Adm extends BaseSetings {
         return clientEquipPage;
     }
 
+    public ContactsPage contactsPage(){
+        ContactsPage contactsPage = new ContactsPage();
+        return contactsPage;
+    }
 }
