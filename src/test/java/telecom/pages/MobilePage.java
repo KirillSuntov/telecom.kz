@@ -54,9 +54,10 @@ public class MobilePage {
     @Step("Проверка изображения {0}")
     public void CheckImg(String className, String srcUrl) {
 
-        System.out.println($(byClassName(className)).$(byTagName("img")).getAttribute("src"));
+//        System.out.println($(byClassName(className)).$(byTagName("img")).getAttribute("src"));
+//        System.out.println(baseUrl+srcUrl);
 
-        if ( $(byClassName(className)).$(byTagName("img")).getAttribute("src").equals(baseUrl+srcUrl)){
+        if ( $(byClassName(className)).$(byTagName("img")).getAttribute("src").equals("https://telecom.kz/"+srcUrl)){
 //            System.out.println("Корректная ссылка на изображение");
         }
         else{
