@@ -48,4 +48,9 @@ public class Adm extends BaseSetings {
         return technicalCheckPage;
     }
 
+    public ClientEquipPage clientEquipPage(){
+        ClientEquipPage clientEquipPage = new ClientEquipPage();
+        return clientEquipPage;
+    }
+
 }
