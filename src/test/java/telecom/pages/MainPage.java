@@ -121,7 +121,7 @@ public class MainPage {
         socialContactsButtons("Business", "https://www.ismet.kz/");
         socialContactsButtons("Сервис проверки ", "/ru/communications/status");
 
-//        defectCrmPopup();
+        defectCrmPopup();
         defectStatus();
         pause(5000);
     }
