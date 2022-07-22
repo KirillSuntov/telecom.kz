@@ -17,7 +17,7 @@ public class Auth extends BaseSetings {
 
     @Step("Авторизация в ЛК 2")
     public Auth logInLk2(String login, String password) {
-        open("/");
+        open("ru/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).waitUntil(Condition.visible,15000).click();
 
@@ -32,7 +32,7 @@ public class Auth extends BaseSetings {
 
     @Step("Авторизация в ЛК 1")
     public Auth logInLk1(String login, String password) {
-        open("/");
+        open("ru/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).waitUntil(Condition.visible,15000).click();
         $(byText("Вход по городскому номеру")).waitUntil(Condition.visible,15000).click();

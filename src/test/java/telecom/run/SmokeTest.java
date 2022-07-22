@@ -18,9 +18,9 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Доступность портала")
     public void checMainPage() {
         Adm adm = new Adm();
-        open("/");
-        adm.mainPage().CheckHeader();
-        adm.mainPage().CheckFooter();
+        open("ru/");
+        adm.mainPage().CheckHeaderRu();
+        adm.mainPage().CheckFooterRu();
     }
 
     //
@@ -44,9 +44,11 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка главной страницы")
     public void checkMain() {
         Adm adm = new Adm();
-        open("/");
-        adm.mainPage().CheckHeader();
-        adm.mainPage().CheckFooter();
+        open("ru/");
+//        adm.mainPage().CheckHeaderRu();
+//        adm.mainPage().CheckFooterRu();
+        adm.mainPage().CheckHeaderKk();
+        adm.mainPage().CheckFooterKk();
     }
 
 
@@ -54,7 +56,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы мобильного приложения")
     public void checkMobile() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.mobilePage().CheckBody();
     }
 
@@ -62,7 +64,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы детализации")
     public void checkDetails() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.logInLk2(login, password);
 //        adm.lkPage().CheckLk1();
 //
@@ -73,7 +75,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы \"Видеонаблюдение в подъезде\"")
     public void checkCctv() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.cctvhomePage().CheckBody();
     }
 
@@ -98,7 +100,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка онлайн каналов связи")
     public void checkMainOnlineCommunications() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.mainPage().CheckOnlineCommunications();
     }
 
@@ -106,7 +108,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка технической возможности подключения")
     public void checkTechnicalCheck() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.technicalCheckPage().CheckBody();
         pause(1000);
     }
@@ -116,7 +118,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы клиенсткого оборудования")
     public void checkClientEquip() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.clientEquipPage().CheckBody();
         pause(1000);
     }
@@ -125,7 +127,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы контакты")
     public void checkContacts() {
         Adm adm = new Adm();
-        open("/");
+        open("ru/");
         adm.contactsPage().CheckBody();
         pause(1000);
     }

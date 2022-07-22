@@ -40,7 +40,7 @@ public class PaymentPage {
 
     @Step("Переход на оплату по номеру телефона")
     public void TlForm() {
-        open("/");
+        open("ru/");
         $("[class*=menu__payment]").click();
         $$(byClassName("nav-item")).first().click();
         $(byName("phone")).setValue("728 363-0378");
@@ -61,7 +61,7 @@ public class PaymentPage {
 
     @Step("Переход на оплату по номеру ЛС")
     public void LSForm() {
-        open("/");
+        open("ru/");
         $("[class*=menu__payment]").click();
         $(byName("abonent_id")).setValue("60205");
         pause(4000);

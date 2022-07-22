@@ -19,7 +19,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class LKPage extends BaseSetings {
 
 
-    @Step("Проверка большой синей штуки")
+    @Step("Проверка данных клиента")
     public void CheckLk1() {
         $(by("aria-controls", "bigBlue")).shouldHave(exactText("СУНЦОВ КИРИЛЛ ВЯЧЕСЛАВОВИЧ"));
         $(byClassName("bigBlueThing__verified")).shouldHave(exactText("7070310740 Верифицированный номер"));
