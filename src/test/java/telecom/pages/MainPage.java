@@ -44,8 +44,7 @@ public class MainPage {
 
     @Step("Проверка хедера на казахском языке")
     public void CheckHeaderKk() {
-        $(byClassName("toppanel__language")).click();
-        $(byClassName("toppanel__language")).$(byText("KK")).click();
+        open("kk/");
 //        CheckLink("Жеке тұлғаларға", "");
         CheckLinkKk("Компания туралы", "about/list");
         CheckLinkKk("Инвесторларға, акционерлерге ", "pages/11893/172452");
@@ -119,7 +118,7 @@ public class MainPage {
 
     @Step("Проверка футера на казахском языке")
     public void CheckFooterKk() {
-
+        open("kk/");
             CheckLinkKk("Интернет", "common/Ultra-new");
             CheckLinkKk("Теледидар", "common/id-tv");
             CheckLinkKk("Телефон", "common/vugodnaya-mobil-svyazi");

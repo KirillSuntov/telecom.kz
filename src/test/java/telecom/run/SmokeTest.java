@@ -21,6 +21,8 @@ public class SmokeTest extends BaseSetings {
         open("ru/");
         adm.mainPage().CheckHeaderRu();
         adm.mainPage().CheckFooterRu();
+        adm.mainPage().CheckHeaderKk();
+        adm.mainPage().CheckFooterKk();
     }
 
     //
