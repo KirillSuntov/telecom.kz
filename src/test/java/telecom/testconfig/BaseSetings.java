@@ -20,6 +20,7 @@ import java.util.Objects;
 import java.util.Random;
 
 import static com.codeborne.selenide.Selenide.close;
+import static com.codeborne.selenide.Selenide.screenshot;
 
 
 public class BaseSetings {
@@ -35,6 +36,12 @@ public class BaseSetings {
 
     @After
     public void tearDown(){
+        screenshot("123");
+        try {
+            screenshot1("Скрин последней страницы");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Selenide.closeWebDriver();
     }
 
@@ -46,7 +53,7 @@ public class BaseSetings {
 //        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
         Configuration.timeout= 8000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 
