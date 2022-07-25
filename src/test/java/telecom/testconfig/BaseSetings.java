@@ -23,7 +23,7 @@ import static com.codeborne.selenide.Selenide.close;
 
 
 public class BaseSetings {
-    protected String login= "7770063159";
+    protected String login= "7070310740";
     protected String password= "Test1234";
 
     public static final Boolean CLEAR_REPORTS_DIR = false;
