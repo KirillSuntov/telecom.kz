@@ -41,8 +41,8 @@ public class ResetPage extends SmsLogPage {
 
     @Step("Установка нового пароля")
     public void NewPassword(String password) {
-        $(byId("userNewPassword")).setValue(password);
-        $(byId("userRepeatNewPassword")).setValue(password);
+        $(byId("userNewPassword")).setValue("Password123");
+        $(byId("userRepeatNewPassword")).setValue("Password123");
         $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
 
         $(byText("Пароль успешно сохранен"));
