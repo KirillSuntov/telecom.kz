@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SmokeTest extends BaseSetings {
 //
-//    @Test
+    @Test
     @DisplayName("Доступность портала")//
     public void checMainPage() {
         Adm adm = new Adm();
@@ -26,7 +26,7 @@ public class SmokeTest extends BaseSetings {
     }
 
     //
-//    @Test
+    @Test
     @DisplayName("Проверка авторизации ЛК2")
     public void checkLoginLk2() {
         Adm adm = new Adm();
@@ -46,7 +46,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка авторизации ЛК1")
     public void checkLoginLk1() {
         Adm adm = new Adm();
@@ -54,7 +54,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка главной страницы")
     public void checkMain() {
         Adm adm = new Adm();
@@ -66,7 +66,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы мобильного приложения")
     public void checkMobile() {
         Adm adm = new Adm();
@@ -74,7 +74,7 @@ public class SmokeTest extends BaseSetings {
         adm.mobilePage().CheckBody();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы детализации")
     public void checkDetails() {
         Adm adm = new Adm();
@@ -85,7 +85,7 @@ public class SmokeTest extends BaseSetings {
         adm.detailsPage().CheckDetails();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы \"Видеонаблюдение в подъезде\"")
     public void checkCctv() {
         Adm adm = new Adm();
@@ -93,14 +93,14 @@ public class SmokeTest extends BaseSetings {
         adm.cctvhomePage().CheckBody();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка возможности оплаты через неавторизованную зону (без подтверждения оплаты)")
     public void payPage() {
         Adm adm = new Adm();
         adm.paymentPage().Payment();
     }
 //
-//    @Test
+    @Test
     @DisplayName("Проверка возможности оплаты через ЛК (без подтверждения оплаты)")
     public void LKpayPage() {
         Adm adm = new Adm();
@@ -110,7 +110,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка онлайн каналов связи")
     public void checkMainOnlineCommunications() {
         Adm adm = new Adm();
@@ -118,7 +118,7 @@ public class SmokeTest extends BaseSetings {
         adm.mainPage().CheckOnlineCommunications();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка технической возможности подключения")
     public void checkTechnicalCheck() {
         Adm adm = new Adm();
@@ -128,7 +128,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы клиенсткого оборудования")
     public void checkClientEquip() {
         Adm adm = new Adm();
@@ -137,7 +137,7 @@ public class SmokeTest extends BaseSetings {
         pause(1000);
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы контакты")
     public void checkContacts() {
         Adm adm = new Adm();
@@ -147,7 +147,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка создания обращений")
     public void checkAppeal() {
         Adm adm = new Adm();
