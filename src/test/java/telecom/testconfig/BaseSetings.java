@@ -36,12 +36,12 @@ public class BaseSetings {
 
     @After
     public void tearDown(){
-        screenshot("123");
-        try {
-            screenshot1("Скрин последней страницы");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//        screenshot("123");
+//        try {
+//            screenshot1("Скрин последней страницы");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         Selenide.closeWebDriver();
     }
 
