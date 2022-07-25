@@ -11,12 +11,15 @@ import org.openqa.selenium.By;
 import telecom.testconfig.BaseSetings;
 //import sapasoft.reg.testconfigs.BaseSetings;
 
+import java.io.IOException;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
+import static telecom.testconfig.BaseSetings.screenshot1;
 
 public class MobilePage {
     public void CheckBody() {
@@ -61,6 +64,13 @@ public class MobilePage {
 //            System.out.println("Корректная ссылка на изображение");
         }
         else{
+
+            screenshot("123");
+            try {
+                screenshot1("Скрин последней страницы");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Assert.fail("Изменена ссылка на изображение");
         }
 
@@ -68,6 +78,13 @@ public class MobilePage {
 //            System.out.println("Изображение отображается");
         }
         else{
+
+            screenshot("123");
+            try {
+                screenshot1("Скрин последней страницы");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Assert.fail("Изображение не отображается");
         }
 

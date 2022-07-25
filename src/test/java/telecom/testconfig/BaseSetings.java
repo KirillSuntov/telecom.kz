@@ -23,7 +23,7 @@ import static com.codeborne.selenide.Selenide.close;
 
 
 public class BaseSetings {
-    protected String login= "7070310740";
+    protected String login= "7770063159";
     protected String password= "Test1234";
 
     public static final Boolean CLEAR_REPORTS_DIR = false;
@@ -46,7 +46,7 @@ public class BaseSetings {
 //        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
         Configuration.timeout= 8000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 

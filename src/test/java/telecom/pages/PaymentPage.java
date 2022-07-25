@@ -1,5 +1,6 @@
 package telecom.pages;
 
+import com.codeborne.selenide.impl.Screenshot;
 import io.qameta.allure.Step;
 import org.junit.Assert;
 import telecom.testconfig.BaseSetings;
@@ -12,12 +13,16 @@ import org.openqa.selenium.By;
 import telecom.testconfig.BaseSetings;
 //import sapasoft.reg.testconfigs.BaseSetings;
 
+import java.io.IOException;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Configuration.baseUrl;
+import static com.codeborne.selenide.Configuration.screenshots;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
+import static telecom.testconfig.BaseSetings.screenshot1;
 
 
 public class PaymentPage {
@@ -39,7 +44,7 @@ public class PaymentPage {
     }
 
     @Step("Переход на оплату по номеру телефона")
-    public void TlForm() {
+    public void TlForm(){
         open("ru/");
         $("[class*=menu__payment]").click();
         $$(byClassName("nav-item")).first().click();
@@ -51,6 +56,13 @@ public class PaymentPage {
             System.out.println($(byName("amount")).getValue().length());
         }
         else{
+
+            screenshot("123");
+            try {
+                screenshot1("Скрин последней страницы");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Assert.fail("Сумма оплаты не подтянулась");
         }
 
@@ -60,7 +72,7 @@ public class PaymentPage {
     }
 
     @Step("Переход на оплату по номеру ЛС")
-    public void LSForm() {
+    public void LSForm(){
         open("ru/");
         $("[class*=menu__payment]").click();
         $(byName("abonent_id")).setValue("60205");
@@ -72,6 +84,12 @@ public class PaymentPage {
             System.out.println($(byName("amount")).getValue().length());
         }
         else{
+            screenshot("123");
+            try {
+                screenshot1("Скрин последней страницы");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Assert.fail("Сумма оплаты не подтянулась");
         }
 
@@ -88,6 +106,12 @@ public class PaymentPage {
             System.out.println($(byName("amount")).getValue().length());
         }
         else{
+            screenshot("123");
+            try {
+                screenshot1("Скрин последней страницы");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             Assert.fail("Сумма оплаты не подтянулась");
         }
         $(byName("amount")).clear();

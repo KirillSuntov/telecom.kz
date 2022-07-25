@@ -32,7 +32,7 @@ public class ResetPage extends SmsLogPage {
         $(byClassName("authorization__user-forgot__trigger-class")).$(byClassName("auth__link-outside")).click();
 
         $(byId("one-time-code")).setValue(getsmscode(login)); //получаем смс код из аминки
-        pause(1000);
+        pause(2000);
         $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
         pause(2000);
 
