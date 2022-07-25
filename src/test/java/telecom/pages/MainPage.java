@@ -235,12 +235,12 @@ public class MainPage {
 
     @Step("Проверка ссылки Footer {0}")
     public void CheckLinkFooter(String elementText, String href, Integer g) {
-        $(byClassName("footer")).waitUntil(visible, 15000).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().shouldHave(attribute("href", baseUrl+"ru/" +href));
+        $(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().shouldHave(attribute("href", baseUrl+"ru/" +href));
     }
 
     @Step("Проверка ссылки Footer {0}")
     public void CheckLinkFooterOut(String elementText, String href, Integer g) {
-        $(byClassName("footer")).waitUntil(visible, 15000).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().shouldHave(attribute("href", href));
+        $(byClassName("footer")).$$(byClassName("footer-list")).get(g).$(withText(elementText)).scrollTo().shouldHave(attribute("href", href));
     }
 
 }

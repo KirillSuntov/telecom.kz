@@ -26,14 +26,14 @@ public class ResetPage extends SmsLogPage {
     @Step("Сброс пароля")
     public void reset(String login, String password) {
         open("ru/");
-        $(byText("Вход")).waitUntil(Condition.visible, 15000).click();
-        $(byName("phone")).waitUntil(Condition.visible, 15000).setValue(login);
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+        $(byText("Вход")).click();
+        $(byName("phone")).setValue(login);
+        $(by("type", "submit")).click();
         $(byClassName("authorization__user-forgot__trigger-class")).$(byClassName("auth__link-outside")).click();
 
         $(byId("one-time-code")).setValue(getsmscode(login)); //получаем смс код из аминки
         pause(2000);
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+        $(by("type", "submit")).click();
         pause(2000);
 
         NewPassword(password);
@@ -41,9 +41,11 @@ public class ResetPage extends SmsLogPage {
 
     @Step("Установка нового пароля")
     public void NewPassword(String password) {
-        $(byId("userNewPassword")).setValue("Password123");
-        $(byId("userRepeatNewPassword")).setValue("Password123");
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+//        $("#password").setValue(withText("admin").sensitive());
+
+        $(byId("userNewPassword")).setValue(password);
+        $(byId("userRepeatNewPassword")).setValue(password);
+        $(by("type", "submit")).click();
 
         $(byText("Пароль успешно сохранен"));
     }
