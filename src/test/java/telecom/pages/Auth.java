@@ -19,12 +19,12 @@ public class Auth extends BaseSetings {
     public Auth logInLk2(String login, String password) {
         open("ru/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
-        $(byText("Вход")).click();
+        $(byText("Вход")).waitUntil(Condition.visible,15000).click();
 
-        $(byName("phone")).setValue(login);
-        $(by("type","submit")).click();
-        $(byName("password")).setValue(password);
-        $(by("type","submit")).click();
+        $(byName("phone")).waitUntil(Condition.visible,15000).setValue(login);
+        $(by("type","submit")).waitUntil(Condition.visible,15000).click();
+        $(byName("password")).waitUntil(Condition.visible,15000).setValue(password);
+        $(by("type","submit")).waitUntil(Condition.visible,15000).click();//
 
 //        pause(5000);
         return this;
@@ -34,13 +34,13 @@ public class Auth extends BaseSetings {
     public Auth logInLk1(String login, String password) {
         open("ru/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
-        $(byText("Вход")).click();
-        $(byText("Вход по городскому номеру")).click();
+        $(byText("Вход")).waitUntil(Condition.visible,15000).click();
+        $(byText("Вход по городскому номеру")).waitUntil(Condition.visible,15000).click();
 
-        $(byName("login")).setValue(login);
+        $(byName("login")).waitUntil(Condition.visible,15000).setValue(login);
 //        $(by("type","submit")).waitUntil(Condition.visible,15000).click();
-        $(byName("password")).setValue(password);
-        $(by("type","submit")).click();
+        $(byName("password")).waitUntil(Condition.visible,15000).setValue(password);
+        $(by("type","submit")).waitUntil(Condition.visible,15000).click();
 
         pause(5000);
         return this;
