@@ -62,4 +62,13 @@ public class Adm extends BaseSetings {
         AppealPage appealPage = new AppealPage();
         return appealPage;
     }
+
+    public ResetPage resetPage(){
+        ResetPage resetPage = new ResetPage();
+        return resetPage;
+    }
+    public SmsLogPage smsLogPage(){
+        SmsLogPage smsLogPage = new SmsLogPage();
+        return smsLogPage;
+    }
 }

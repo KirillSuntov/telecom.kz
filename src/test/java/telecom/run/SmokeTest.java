@@ -35,6 +35,18 @@ public class SmokeTest extends BaseSetings {
     }
 
     @Test
+    @DisplayName("Проверка восстановления пароля ЛК2")
+    public void checkResetPassword() {
+        Adm adm = new Adm();
+
+        adm.resetPage().reset(login, password);
+        pause(1000);
+//        adm.logInLk2(login, password);
+//        adm.lkPage().CheckLk1();
+    }
+
+
+    @Test
     @DisplayName("Проверка авторизации ЛК1")
     public void checkLoginLk1() {
         Adm adm = new Adm();

@@ -46,6 +46,9 @@ public class Auth extends BaseSetings {
         return this;
     }
 
+
+
+
 //
 //    @Step("Выход из системы")
 //    public Auth logOut() {
