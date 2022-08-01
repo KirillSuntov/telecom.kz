@@ -36,12 +36,12 @@ public class BaseSetings {
 
     @After
     public void tearDown(){
-//        screenshot("123");
-//        try {
-//            screenshot1("Скрин последней страницы");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        screenshot("123");
+        try {
+            screenshot1("Скрин последней страницы");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Selenide.closeWebDriver();
     }
 
@@ -53,7 +53,7 @@ public class BaseSetings {
 //        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
         Configuration.timeout= 8000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = false;
+        Configuration.headless = true;
         Configuration.holdBrowserOpen = false;
 
 

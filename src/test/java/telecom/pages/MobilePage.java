@@ -39,7 +39,7 @@ public class MobilePage {
 //        System.out.println($(byId("downloadLinks")).$(byTagName("img")).getAttribute("alt"));
         $(byId("downloadLinks")).$(byTagName("img")).getAttribute("src").equals("img/main/mobile/google_play.svg");
         $(byId("downloadLinks")).$(byTagName("img")).getAttribute("alt").equals("google_play");
-        if ($(byId("downloadLinks")).$(byTagName("img")).getSize().height < 50) {
+        if ($(byId("downloadLinks")).$(byTagName("img")).getSize().height < 10) {
             screenshot("123");
             try {
                 screenshot1("Скрин последней страницы");
@@ -53,7 +53,7 @@ public class MobilePage {
 
         $(byId("downloadLinks")).$$(byTagName("img")).get(1).getAttribute("src").equals("img/main/mobile/app_store.svg");
         $(byId("downloadLinks")).$$(byTagName("img")).get(1).getAttribute("alt").equals("app_store");
-        if ($(byId("downloadLinks")).$$(byTagName("img")).get(1).getSize().height < 50) {
+        if ($(byId("downloadLinks")).$$(byTagName("img")).get(1).getSize().height < 10) {
             screenshot("123");
             try {
                 screenshot1("Скрин последней страницы");
