@@ -71,4 +71,5 @@ public class Adm extends BaseSetings {
         SmsLogPage smsLogPage = new SmsLogPage();
         return smsLogPage;
     }
+
 }

@@ -75,7 +75,7 @@ public class PaymentPage {
     public void LSForm(){
         open("ru/");
         $("[class*=menu__payment]").click();
-        $(byName("abonent_id")).setValue("60205");
+        $(byName("abonent_id")).setValue("63279");
         pause(4000);
 
         System.out.println($(byName("amount")).getValue());

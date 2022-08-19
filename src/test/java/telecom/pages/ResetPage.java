@@ -47,4 +47,31 @@ public class ResetPage extends SmsLogPage {
 
         $(byText("Пароль успешно сохранен"));
     }
+
+
+    @Step("Проверка верификации ЛК2")
+    public void verification() {
+        open("ru/");
+        $(byText("Вход")).waitUntil(Condition.visible, 15000).click();
+        $(byName("phone")).waitUntil(Condition.visible, 15000).setValue("7070310748");
+        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+//        System.out.println($(withText("Мобильный номер не верифицирован.")).getText());
+        $(withText("Мобильный номер не верифицирован.")).click();
+        $(withText("Мобильный номер не верифицирован."))
+                .$(byAttribute("href", "https://telecom.kz/ru/customer/verification/welcome?utm_source=link&utm_medium=lc&utm_campaign=verify")).click();
+
+
+        webdriver().driver().switchTo().window(1);
+        $(withText("Отсканируйте QR код с помощью мобильного телефона")).click();
+
+        $(withText("Другой способ"))
+                .$(byAttribute("href", "/ru/customer/verification/confirm-iin")).click();
+
+//        open("ru/customer/verification/confirm-iin");
+//        $(byClassName("recaptcha-checkbox-border")).click();
+        $(withText("Подтверждение личности ")).click();
+        pause(5000);
+    }
+
+
 }
