@@ -64,12 +64,11 @@ public class ResetPage extends SmsLogPage {
         webdriver().driver().switchTo().window(1);
         $(withText("Отсканируйте QR код с помощью мобильного телефона")).click();
 
-        $(withText("Другой способ"))
-                .$(byAttribute("href", "/ru/customer/verification/confirm-iin")).click();
+        $(withText("Другой способ")).click();
 
 //        open("ru/customer/verification/confirm-iin");
 //        $(byClassName("recaptcha-checkbox-border")).click();
-        $(withText("Подтверждение личности ")).click();
+        $(byText("Подтверждение личности")).click();
         pause(5000);
     }
 
