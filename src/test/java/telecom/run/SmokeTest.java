@@ -45,7 +45,7 @@ public class SmokeTest extends BaseSetings {
 //        pause(1000);
 ////        adm.logInLk2(login, password);
 ////        adm.lkPage().CheckLk1();
-    }
+//    }
 
 //    @Test
     @DisplayName("Проверка верификации пользователя ЛК2")
