@@ -28,7 +28,7 @@ public class SmokeTest extends BaseSetings {
     }
 
     //
-//    @Test
+    @Test
     @DisplayName("Проверка авторизации ЛК2")
     public void checkLoginLk2() {
         Adm adm = new Adm();
@@ -47,7 +47,7 @@ public class SmokeTest extends BaseSetings {
 ////        adm.lkPage().CheckLk1();
 //    }
 
-    @Test
+//    @Test
     @DisplayName("Проверка верификации пользователя ЛК2")
     public void checkVerificationLk2() {
         Adm adm = new Adm();
