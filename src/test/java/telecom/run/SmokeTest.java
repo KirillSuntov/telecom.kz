@@ -7,6 +7,8 @@ import org.junit.runners.MethodSorters;
 import telecom.pages.Adm;
 import telecom.testconfig.BaseSetings;
 
+import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -112,6 +114,7 @@ public class SmokeTest extends BaseSetings {
     public void LKpayPage() {
         Adm adm = new Adm();
         adm.logInLk2(login, password);
+        $(byText("Лицевой счет 63279")).click();
         pause(10000);
         adm.paymentPage().PaymentLK();
     }

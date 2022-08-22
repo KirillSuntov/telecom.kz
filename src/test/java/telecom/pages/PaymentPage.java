@@ -102,6 +102,7 @@ public class PaymentPage {
 
     @Step("Переход на оплату из ЛК2")
     public void LKForm() {
+
         if ($(byName("amount")).getValue().length()>1){
             System.out.println($(byName("amount")).getValue().length());
         }
