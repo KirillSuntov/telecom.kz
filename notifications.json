@@ -3,7 +3,7 @@
     "project": "Ежедневный тест",
     "environment": "https://telecom.kz/",
     "comment": "Полное тестирование фанкционала в 8:00 и 13:30",
-    "reportLink": "https://jenkins.telecom.kz/job/Telecom_Daily_Test/allure/",
+    "reportLink": "https://jenkins.telecom.kz/job/Telecom_Daily_Test/",
     "language": "ru",
     "allureFolder": "allure-report/",
     "enableChart": true
