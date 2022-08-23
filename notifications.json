@@ -1,5 +1,6 @@
 {
   "base": {
+	"logo": "logo-kazahtelekom.png",
     "project": "Ежедневный тест",
     "environment": "https://telecom.kz/",
     "comment": "Полное тестирование фанкционала в 8:00 и 13:30",
