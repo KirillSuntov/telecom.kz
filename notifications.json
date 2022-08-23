@@ -1,9 +1,9 @@
 {
   "base": {
-    "project": "${JOB_BASE_NAME}",
+    "project": ${JOB_BASE_NAME},
     "environment": "https://telecom.kz/",
     "comment": "SmokeTest",
-    "reportLink": "${BUILD_URL}",
+    "reportLink": ${BUILD_URL},
     "language": "ru",
     "allureFolder": "allure-report/",
     "enableChart": true
