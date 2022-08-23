@@ -1,10 +1,10 @@
 {
   "base": {
-    "project": "some project",
-    "environment": "some env",
-    "comment": "some comment",
-    "reportLink": "",
-    "language": "en",
+    "project": "${JOB_BASE_NAME}",
+    "environment": "https://telecom.kz/",
+    "comment": "SmokeTest",
+    "reportLink": "${BUILD_URL}",
+    "language": "ru",
     "allureFolder": "allure-report/",
     "enableChart": true
   },
