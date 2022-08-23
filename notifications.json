@@ -1,9 +1,9 @@
 {
   "base": {
-    "project": ${JOB_BASE_NAME},
+    "project": "Ежедневный тест",
     "environment": "https://telecom.kz/",
-    "comment": "SmokeTest",
-    "reportLink": ${BUILD_URL},
+    "comment": "Полное тестирование фанкционала в 8:00 и 13:30",
+    "reportLink": "https://jenkins.telecom.kz/job/Telecom_Daily_Test/allure/",
     "language": "ru",
     "allureFolder": "allure-report/",
     "enableChart": true
