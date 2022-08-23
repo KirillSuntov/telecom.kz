@@ -203,7 +203,7 @@ public class MainPage {
         socialContactsButtons("Сервис проверки ", "/ru/communications/status");
 
         defectCrmPopup(); //defectCrmPopup
-        defectStatus();
+//        defectStatus(); //капча
         pause(5000);
     }
 
