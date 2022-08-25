@@ -44,7 +44,7 @@ public class AppealPage {
         $(byTagName("textarea")).setValue("автоматическая тестовая заявка, звонить не требуется");
         $(by("type","submit")).click();
         pause(1000);
-        $(byText("Ваше обращение принято")).click();
+//        $(byText("Ваше обращение принято")).click();
     }
 
 }
