@@ -22,8 +22,10 @@ public class Auth extends BaseSetings {
         $(byText("Вход")).waitUntil(Condition.visible,15000).click();
 
         $(byName("phone")).waitUntil(Condition.visible,15000).setValue(login);
+        System.out.println(webdriver().driver().url());
         $(by("type","submit")).waitUntil(Condition.visible,15000).click();
         $(byName("password")).waitUntil(Condition.visible,15000).setValue(password);
+        System.out.println(webdriver().driver().url());
         $(by("type","submit")).waitUntil(Condition.visible,15000).click();//
 
 //        pause(5000);
