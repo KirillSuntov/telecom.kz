@@ -28,12 +28,14 @@ import static com.codeborne.selenide.Selenide.*;
 public class BaseSetings {
     protected String login= "7070310740";
     protected String password= "Test1234";
+    protected static String pareUrl="";
 
     public static final Boolean CLEAR_REPORTS_DIR = false;
 
     @Before
     public void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+
     }
 
 
@@ -42,12 +44,11 @@ public class BaseSetings {
     public void tearDown(){
         screenshot("123");
         try {
-            screenshot1("Скрин последней страницы");
+            screenshot1("Скрин последней страницы"+pareUrl);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("URL финальной страницы: "+webdriver().driver().url());
-        info("URL финальной страницы: "+webdriver().driver().url());
+
         Selenide.closeWebDriver();
 
     }
@@ -104,14 +105,21 @@ public class BaseSetings {
         return dateFormat.format(date);
     }
 
-    @Attachment(value = "Снимок", type = "image/png")
+    @Attachment(value = "Снимок текущей страницы", type = "image/png")
     public static byte[] screenshot1(String str) throws IOException, NullPointerException {
         File screenshot = Screenshots.getLastScreenshot();
         close();
 
         return Files.toByteArray(screenshot);
-
     }
+
+    @Attachment(value = "attachment", type = "text/plain")
+    public static String urlText() {
+
+        return pareUrl;
+    }
+
+
     @Step("{0}")
     public void info(String info) {
         System.out.print(info);
