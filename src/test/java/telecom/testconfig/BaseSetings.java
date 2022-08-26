@@ -28,7 +28,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class BaseSetings {
     protected String login= "7070310740";
     protected String password= "Test1234";
-    protected static String pareUrl="";
+
 
     public static final Boolean CLEAR_REPORTS_DIR = false;
 
@@ -44,7 +44,7 @@ public class BaseSetings {
     public void tearDown(){
         screenshot("123");
         try {
-            screenshot1("Скрин последней страницы"+pareUrl);
+            screenshot1("Скрин последней страницы");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -113,11 +113,7 @@ public class BaseSetings {
         return Files.toByteArray(screenshot);
     }
 
-    @Attachment(value = "attachment", type = "text/plain")
-    public static String urlText() {
 
-        return pareUrl;
-    }
 
 
     @Step("{0}")
