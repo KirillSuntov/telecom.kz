@@ -8,6 +8,8 @@ import com.google.common.io.Files;
 //import com.sun.tools.javac.util.Log;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
+import io.qameta.allure.model.Status;
+import io.qameta.allure.model.StatusDetails;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.apache.http.util.Asserts;
 import org.junit.After;
@@ -28,6 +30,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class BaseSetings {
     protected String login= "7070310740";
     protected String password= "Test1234";
+    public static String pageurl= "";
 
 
     public static final Boolean CLEAR_REPORTS_DIR = false;
@@ -48,7 +51,9 @@ public class BaseSetings {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
+        System.out.println(webdriver().driver().url());
+        pageurl= webdriver().driver().url();
+        info("URL последней страницы: "+pageurl);
         Selenide.closeWebDriver();
 
     }
@@ -108,8 +113,8 @@ public class BaseSetings {
     @Attachment(value = "Снимок текущей страницы", type = "image/png")
     public static byte[] screenshot1(String str) throws IOException, NullPointerException {
         File screenshot = Screenshots.getLastScreenshot();
-        close();
 
+//        close();
         return Files.toByteArray(screenshot);
     }
 
@@ -131,4 +136,7 @@ public class BaseSetings {
             e.printStackTrace();
         }
     }
+
+
+
 }
