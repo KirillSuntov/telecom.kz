@@ -44,7 +44,7 @@ public class PaymentPage {
     }
 
     @Step("Переход на оплату по номеру телефона")
-    public void TlForm(){
+    public void TlForm() {
         open("ru/");
         $("[class*=menu__payment]").click();
         $$(byClassName("nav-item")).first().click();
@@ -52,10 +52,9 @@ public class PaymentPage {
         pause(4000);
 
         System.out.println($(byName("amount")).getValue());
-        if ($(byName("amount")).getValue().length()>1){
+        if ($(byName("amount")).getValue().length() > 1) {
             System.out.println($(byName("amount")).getValue().length());
-        }
-        else{
+        } else {
 
             screenshot("123");
             try {
@@ -72,7 +71,7 @@ public class PaymentPage {
     }
 
     @Step("Переход на оплату по номеру ЛС")
-    public void LSForm(){
+    public void LSForm() {
         open("ru/");
         $("[class*=menu__payment]").click();
         $(byName("abonent_id")).setValue("63279");
@@ -80,10 +79,9 @@ public class PaymentPage {
 
         System.out.println($(byName("amount")).getValue());
 
-        if ($(byName("amount")).getValue().length()>1){
+        if ($(byName("amount")).getValue().length() > 1) {
             System.out.println($(byName("amount")).getValue().length());
-        }
-        else{
+        } else {
             screenshot("123");
             try {
                 screenshot1("Скрин последней страницы");
@@ -102,18 +100,23 @@ public class PaymentPage {
 
     @Step("Переход на оплату из ЛК2")
     public void LKForm() {
+        $(byText("Лицевой счет 63279")).click();
+        pause(10000);
 
-        if ($(byName("amount")).getValue().length()>1){
+        if ($(byName("amount")).getValue().length() > 1) {
             System.out.println($(byName("amount")).getValue().length());
-        }
-        else{
-            screenshot("123");
-            try {
-                screenshot1("Скрин последней страницы");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-            Assert.fail("Сумма оплаты не подтянулась");
+        } else {
+            open("ru/customer/services");
+            pause(10000);
+            if ($(byName("amount")).getValue().length() > 1) {
+                System.out.println($(byName("amount")).getValue().length());
+            }else {screenshot("123");
+                try {
+                    screenshot1("Скрин последней страницы");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                Assert.fail("Сумма оплаты не подтянулась");}
         }
         $(byName("amount")).clear();
         $(byName("amount")).setValue("100");
@@ -123,7 +126,7 @@ public class PaymentPage {
 
     @Step("Заполнение и проверка данных в KT-Pay")
     public void KT_Pay() {
-        switchTo().innerFrame("iframe_widget","iframe_widget"); //переключаемся на виджет оплаты
+        switchTo().innerFrame("iframe_widget", "iframe_widget"); //переключаемся на виджет оплаты
 
         $(byId("card_no_bin")).setValue("1111111111111111");
         $(byId("card_name")).setValue("testov test");

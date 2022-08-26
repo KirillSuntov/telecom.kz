@@ -5,10 +5,13 @@ import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.google.common.io.Files;
+import com.sun.tools.javac.util.Log;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.apache.http.util.Asserts;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 
 import java.io.File;
@@ -19,8 +22,7 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
 
-import static com.codeborne.selenide.Selenide.close;
-import static com.codeborne.selenide.Selenide.screenshot;
+import static com.codeborne.selenide.Selenide.*;
 
 
 public class BaseSetings {
@@ -34,7 +36,9 @@ public class BaseSetings {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
     }
 
+
     @After
+    @Step("Завершение теста")
     public void tearDown(){
         screenshot("123");
         try {
@@ -42,8 +46,13 @@ public class BaseSetings {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        System.out.println("URL финальной страницы: "+webdriver().driver().url());
+        info("URL финальной страницы: "+webdriver().driver().url());
         Selenide.closeWebDriver();
+
     }
+
+
 
 
     static {

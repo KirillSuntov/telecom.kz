@@ -114,8 +114,6 @@ public class SmokeTest extends BaseSetings {
     public void LKpayPage() {
         Adm adm = new Adm();
         adm.logInLk2(login, password); //
-        $(byText("Лицевой счет 63279")).click();
-        pause(10000);
         adm.paymentPage().PaymentLK();
     }
 
