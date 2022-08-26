@@ -5,7 +5,7 @@ import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import com.google.common.io.Files;
-import com.sun.tools.javac.util.Log;
+//import com.sun.tools.javac.util.Log;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
