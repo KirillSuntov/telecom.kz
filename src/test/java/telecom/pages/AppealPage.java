@@ -33,7 +33,7 @@ public class AppealPage {
 
     @Step("Создание обращения с типом {0}")
     public void SendAppeal(String typeAppeal) {
-//        open("customer/orders/histories/communications");
+        open("customer/orders/histories/communications");
         $(byText("Мои обращения")).click();
         $(byText("Создать обращение")).click();
         $(byText(typeAppeal)).click();
