@@ -102,22 +102,22 @@ public class PaymentPage {
     public void LKForm() {
         $(byText("Лицевой счет 63279")).click();
         pause(10000);
-
-        if ($(byName("amount")).getValue().length() > 1) {
-            System.out.println($(byName("amount")).getValue().length());
-        } else {
-            open("ru/customer/services");
-            pause(10000);
-            if ($(byName("amount")).getValue().length() > 1) {
-                System.out.println($(byName("amount")).getValue().length());
-            }else {screenshot("123");
-                try {
-                    screenshot1("Скрин последней страницы");
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                Assert.fail("Сумма оплаты не подтянулась");}
-        }
+        $(byName("amount")).getValue();
+//        if ($(byName("amount")).getValue().length() > 1) {
+//            System.out.println($(byName("amount")).getValue().length());
+//        } else {
+//            open("ru/customer/services");
+//            pause(10000);
+//            if ($(byName("amount")).getValue().length() > 1) {
+//                System.out.println($(byName("amount")).getValue().length());
+//            }else {screenshot("123");
+//                try {
+//                    screenshot1("Скрин последней страницы");
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//                Assert.fail("Сумма оплаты не подтянулась");}
+//        }
         $(byName("amount")).clear();
         $(byName("amount")).setValue("100");
         $(byClassName("bigBlueThing__payment")).$(byTagName("button")).click();
