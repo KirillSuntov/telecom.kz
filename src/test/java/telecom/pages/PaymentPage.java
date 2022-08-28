@@ -101,7 +101,7 @@ public class PaymentPage {
     @Step("Переход на оплату из ЛК2")
     public void LKForm() {
         $(byText("Лицевой счет 63279")).click();
-        pause(10000);
+        pause(20000);
         $(byName("amount")).getValue();
         if ($(byName("amount")).getValue().length() > 1) {
             System.out.println($(byName("amount")).getValue().length());
