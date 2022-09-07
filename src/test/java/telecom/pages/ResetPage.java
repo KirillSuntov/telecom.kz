@@ -68,6 +68,7 @@ public class ResetPage extends SmsLogPage {
 
 //        open("ru/customer/verification/confirm-iin");
 //        $(byClassName("recaptcha-checkbox-border")).click();
+        $(byText("Продолжить")).click();
         $(byText("Подтверждение личности")).click();
         pause(5000);
     }
