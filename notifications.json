@@ -3,7 +3,7 @@
 	"logo": "logo-kazahtelekom_mini.png",
     "project": "Ежедневный тест",
     "environment": "https://telecom.kz/",
-    "comment": "Полное тестирование фанкционала в 7:30, 8:30, 13:30, 16:30, 19:30",
+    "comment": "Полное тестирование фанкционала в 8:30, 16:30",
     "reportLink": "https://jenkins.telecom.kz/job/Telecom_Daily_Test/",
     "language": "ru",
     "allureFolder": "allure-report/",
