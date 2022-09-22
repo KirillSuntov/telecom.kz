@@ -47,9 +47,9 @@ public class TechnicalCheckPage {
     @Step("Заполнение данных при отсутствии технической возможности")
     public  void negativeCheck() {
         open("technical-check");
-        $(byName("town_state_id")).setValue("Нур");
+        $(byName("town_state_id")).setValue("Аст");
         pause(500);
-        $$(byText("Нур-Султан")).last().click();
+        $$(byText("Астана")).last().click();
         $(byName("street")).setValue("ташенова");
         pause(500);
         $$(withText("ТАШЕНОВА")).first().click();
