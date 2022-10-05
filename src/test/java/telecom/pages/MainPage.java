@@ -32,7 +32,7 @@ public class MainPage {
         CheckLink("Контакты", "contacts/list");
 
         CheckLinkOut("Магазин", "https://shop.telecom.kz/?utm_source=websitetelecomkz&utm_medium=shopbutton&utm_campaign=referral&utm_id=telecom");
-        CheckLink("Интернет", "common/Ultra-new");
+//        CheckLink("Интернет", "common/Ultra-new");
         CheckLink("Телевидение", "common/tvplus");
         CheckLink("Телефон", "common/mobsvyaz-altel");
         CheckLink("Помощь", "knowledge/14");
