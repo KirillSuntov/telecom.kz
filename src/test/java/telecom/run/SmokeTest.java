@@ -164,4 +164,13 @@ public class SmokeTest extends BaseSetings {
         pause(5000);
     }
 
+       @Test
+    @DisplayName("Проверка подключения дополнительный услуг")
+    public void checkVas() {
+        Adm adm = new Adm();
+        adm.logInLk2(login, password); //
+        adm.vasPage().CheckALL();
+    }
+
+
 }

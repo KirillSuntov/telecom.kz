@@ -71,5 +71,9 @@ public class Adm extends BaseSetings {
         SmsLogPage smsLogPage = new SmsLogPage();
         return smsLogPage;
     }
+    public VasPage vasPage(){
+        VasPage vasPage = new VasPage();
+        return vasPage;
+    }
 
 }
