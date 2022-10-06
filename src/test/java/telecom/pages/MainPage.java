@@ -60,7 +60,7 @@ public class MainPage {
 
     @Step("Проверка футера на русском языке")
     public void CheckFooterRu() {
-        CheckLinkFooter("Интернет", "common/Ultra-new", 0);
+        CheckLinkFooter("Интернет", "common/idnet", 0);
         CheckLinkFooter("Телевидение", "common/id-tv", 0);
         CheckLinkFooter("Телефон", "common/vugodnaya-mobil-svyazi", 0);
         CheckLinkFooter("Новые услуги", "services/cctv-home", 0);
