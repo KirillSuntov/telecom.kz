@@ -29,7 +29,7 @@ public class VasPage {
     public void addVas() {
         $$(byText("Подключить")).get(1).click();
         $(byClassName("extra__services__email")).$(byText("Подключить")).click();
-        pause(25000);
+        pause(45000);
     }
 
     @Step("Отключение услуги Музыка Nur.kz")
