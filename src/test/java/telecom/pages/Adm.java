@@ -76,4 +76,9 @@ public class Adm extends BaseSetings {
         return vasPage;
     }
 
+    public EsimPage esimPage(){
+        EsimPage esimPage = new EsimPage();
+        return esimPage;
+    }
+
 }

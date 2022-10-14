@@ -172,5 +172,13 @@ public class SmokeTest extends BaseSetings {
         adm.vasPage().CheckALL();
     }
 
+    @Test
+    @DisplayName("Проверка страницы E-sim")
+    public void checkEsim() {
+        Adm adm = new Adm();
+        adm.esimPage().CheckBody();
+        pause(2000);
+    }
+
 
 }
