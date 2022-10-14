@@ -37,6 +37,7 @@ public class VasPage {
         pause(2000);
         open("ru/customer/services");
         $(byText("Отключить")).scrollTo().click();
+        pause(2000);
         $(byText("Вы действительно хотите отключить \"Музыка Nur.kz\" ?"));
 //       $(byClassName("btn btn-danger")).click();
         $$("[class*=btn-danger]").get(2).click();
