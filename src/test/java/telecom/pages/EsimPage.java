@@ -78,8 +78,8 @@ public class EsimPage {
         $$(byClassName("eSim__btn")).last().click();
         pause(2000);
         $(byXpath("//input[@id='phone_number']")).setValue("7751494255");
-        $$(byXpath("//button[@type='button']")).last().click();
-        $(byText("Вам отправлено смс. Введите код из смс")).shouldBe(visible);
+//        $$(byXpath("//button[@type='button']")).last().click();
+//        $(byText("Вам отправлено смс. Введите код из смс")).shouldBe(visible);
         pause(3000);
         $(byXpath("//i[@class='material-icons rotate-minus-45']")).click();
     }
