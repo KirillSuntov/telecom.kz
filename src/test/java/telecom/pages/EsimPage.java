@@ -23,7 +23,7 @@ public class EsimPage {
 
     public void CheckBody() {
         open("");
-        pause(5000);
+        pause(2000);
         routetoEsim();
         imgandtext();
         potentialdeal();

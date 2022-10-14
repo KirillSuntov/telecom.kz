@@ -4,9 +4,11 @@ import io.qameta.allure.junit4.DisplayName;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
+import org.openqa.selenium.Keys;
 import telecom.pages.Adm;
 import telecom.testconfig.BaseSetings;
 
+import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -36,16 +38,16 @@ public class SmokeTest extends BaseSetings {
         adm.lkPage().CheckLk1();
     }
 
-    @Test
-    @DisplayName("Проверка восстановления пароля ЛК2")
-    public void checkResetPassword() {
-        Adm adm = new Adm();
-
-        adm.resetPage().reset(login, password);
-        pause(1000);
-//        adm.logInLk2(login, password);
-//        adm.lkPage().CheckLk1();
-    }
+//    @Test
+//    @DisplayName("Проверка восстановления пароля ЛК2")
+//    public void checkResetPassword() {
+//        Adm adm = new Adm();
+//
+//        adm.resetPage().reset(login, password);
+//        pause(1000);
+////        adm.logInLk2(login, password);
+////        adm.lkPage().CheckLk1();
+//    }
 
     @Test
     @DisplayName("Проверка верификации пользователя ЛК2")
@@ -165,10 +167,11 @@ public class SmokeTest extends BaseSetings {
     }
 
        @Test
-    @DisplayName("Проверка подключения дополнительный услуг")
+    @DisplayName("Проверка подключения дополнительных услуг")
     public void checkVas() {
         Adm adm = new Adm();
         adm.logInLk2(login, password); //
+           $(byCssSelector("body")).sendKeys(Keys.CONTROL + "t");
         adm.vasPage().CheckALL();
     }
 
