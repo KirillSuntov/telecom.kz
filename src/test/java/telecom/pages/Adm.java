@@ -11,6 +11,9 @@ public class Adm extends BaseSetings {
         new Auth().logInLk1(login, password);
     }
 
+    public static void realnikitalogInlk2(String realnikitalogin, String realnikitapassword){
+        new Auth().cctvlogInlk2(realnikitalogin, realnikitapassword); }
+
 
 
     public LKPage lkPage(){
@@ -79,6 +82,15 @@ public class Adm extends BaseSetings {
     public EsimPage esimPage(){
         EsimPage esimPage = new EsimPage();
         return esimPage;
+    }
+
+//    public CCTVFunctional cctvFun(){
+//        CCTVFunctional cctvFun = new CCTVFunctional();
+//        return cctvFun;
+//    }
+    public DiscRequestRedButton discrequestButton(){
+        DiscRequestRedButton discrequestButton = new DiscRequestRedButton();
+        return discrequestButton;
     }
 
 }

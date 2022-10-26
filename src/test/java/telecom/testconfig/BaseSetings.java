@@ -26,10 +26,13 @@ import java.util.Random;
 
 import static com.codeborne.selenide.Selenide.*;
 
-
 public class BaseSetings {
     protected String login= "7070310740";
     protected String password= "Test1234";
+
+    protected String realnikitalogin= "7770063159";
+    protected String realnikitapassword= "Test176063";
+
     public static String pageurl= "";
 
 
@@ -68,7 +71,7 @@ public class BaseSetings {
 //        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
         Configuration.timeout= 8000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 

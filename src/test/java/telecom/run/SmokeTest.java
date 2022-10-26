@@ -183,5 +183,23 @@ public class SmokeTest extends BaseSetings {
         pause(2000);
     }
 
+//    @Test
+//    @DisplayName("Проверка функционала видеонаблюдения")
+//    public void cctvFun() {
+//        Adm adm = new Adm();
+//        Adm.cctvlogInlk2(cctvlogin, cctvpassword);
+//        pause(1000);
+//        adm.cctvFun().CheckBody();
+//
+//    }
+    @Test
+    @DisplayName("Проверка создания заявки на отключение услуги")
+    public void discrequestButton() {
+        Adm adm = new Adm();
+        Adm.realnikitalogInlk2(realnikitalogin, realnikitapassword);
+        pause(5000);
+        adm.discrequestButton().CheckBody();
+    }
+
 
 }
