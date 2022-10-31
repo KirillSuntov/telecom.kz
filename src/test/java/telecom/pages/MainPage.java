@@ -200,7 +200,7 @@ public class MainPage {
         socialContactsButtons("Whatsapp", "https://wa.me/77080000160");
         socialContactsButtons("Telegram", "https://t.me/TelecomKZBot");
         socialContactsButtons("Business", "https://www.ismet.kz/");
-        socialContactsButtons("Сервис проверки ", "/ru/communications/status");
+//        socialContactsButtons("Сервис проверки ", "/ru/communications/status");
 
         defectCrmPopup(); //defectCrmPopup
 //        defectStatus(); //капча
