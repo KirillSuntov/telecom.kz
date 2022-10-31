@@ -48,6 +48,27 @@ public class Auth extends BaseSetings {
         return this;
     }
 
+    @Step("Авторизация в ЛК 2 (Реальная учетка Никиты)")
+    public Auth cctvlogInlk2(String realnikitalogin, String realnikitapassword) {
+        open("ru/");
+//        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
+        $(byText("Вход")).waitUntil(Condition.visible,15000).click();
+
+        $(byName("phone")).waitUntil(Condition.visible,15000).setValue(realnikitalogin);
+        System.out.println(webdriver().driver().url());
+        $(by("type","submit")).waitUntil(Condition.visible,15000).click();
+        $(byName("password")).waitUntil(Condition.visible,15000).setValue(realnikitapassword);
+        System.out.println(webdriver().driver().url());
+        $(by("type","submit")).waitUntil(Condition.visible,15000).click();//
+
+//        pause(5000);
+        return this;
+    }
+
+
+
+
+
 
 
 
