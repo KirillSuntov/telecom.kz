@@ -98,5 +98,10 @@ public class Adm extends BaseSetings {
         return voLTEPage;
     }
 
+    public MainPageFromMobile mainPageFromMobile(){
+        MainPageFromMobile mainPageFromMobile = new MainPageFromMobile();
+        return mainPageFromMobile;
+    }
+
 
 }

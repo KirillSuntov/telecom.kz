@@ -1,5 +1,6 @@
 package telecom.run;
 
+import com.codeborne.selenide.Configuration;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -208,5 +209,16 @@ public class SmokeTest extends BaseSetings {
         Adm.voLTEPage().CheckBody();
     }
 
-
+    @Test
+    @DisplayName("Проверка главной страницы с эмуляцией мобильного устройства")
+    public void mainPageFromMobile() {
+        Configuration.browserSize = "360x740";
+        Adm adm = new Adm();
+        open("ru/");
+        adm.mainPageFromMobile().CheckHeaderRu();
+        adm.mainPageFromMobile().CheckFooterRu();
+        adm.mainPageFromMobile().CheckHeaderKk();
+        adm.mainPageFromMobile().CheckFooterKk();
+        Configuration.browserSize = "1300x1080";
+    }
 }
