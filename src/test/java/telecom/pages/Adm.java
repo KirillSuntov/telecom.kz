@@ -93,4 +93,10 @@ public class Adm extends BaseSetings {
         return discrequestButton;
     }
 
+    public static VoLTEPage voLTEPage(){
+        VoLTEPage voLTEPage = new VoLTEPage();
+        return voLTEPage;
+    }
+
+
 }
