@@ -93,4 +93,15 @@ public class Adm extends BaseSetings {
         return discrequestButton;
     }
 
+    public static VoLTEPage voLTEPage(){
+        VoLTEPage voLTEPage = new VoLTEPage();
+        return voLTEPage;
+    }
+
+    public MainPageFromMobile mainPageFromMobile(){
+        MainPageFromMobile mainPageFromMobile = new MainPageFromMobile();
+        return mainPageFromMobile;
+    }
+
+
 }
