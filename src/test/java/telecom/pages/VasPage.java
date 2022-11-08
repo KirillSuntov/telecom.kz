@@ -27,7 +27,7 @@ public class VasPage {
 
     @Step("Подключение услуги Музыка Nur.kz")
     public void addVas() {
-        $$(byText("Подключить")).get(1).click();
+        $$(byText("Подключить")).get(0).click();
         $(byClassName("extra__services__email")).$(byText("Подключить")).click();
         pause(45000);
     }
