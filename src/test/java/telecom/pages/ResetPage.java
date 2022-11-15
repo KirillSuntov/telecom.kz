@@ -26,14 +26,14 @@ public class ResetPage extends SmsLogPage {
     @Step("Сброс пароля")
     public void reset(String login, String password) {
         open("ru/");
-        $(byText("Вход")).waitUntil(Condition.visible, 15000).click();
-        $(byName("phone")).waitUntil(Condition.visible, 15000).setValue(login);
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+        $(byText("Вход")).click();
+        $(byName("phone")).setValue(login);
+        $(by("type", "submit")).click();
         $(byClassName("authorization__user-forgot__trigger-class")).$(byClassName("auth__link-outside")).click();
 
         $(byId("one-time-code")).setValue(getsmscode(login)); //получаем смс код из аминки
         pause(2000);
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();//
+        $(by("type", "submit")).click();//
         pause(2000);
 
         NewPassword(password);
@@ -43,7 +43,7 @@ public class ResetPage extends SmsLogPage {
     public void NewPassword(String password) {
         $(byId("userNewPassword")).setValue(password);
         $(byId("userRepeatNewPassword")).setValue(password);
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+        $(by("type", "submit")).click();
 
         $(byText("Пароль успешно сохранен"));
     }
@@ -52,9 +52,9 @@ public class ResetPage extends SmsLogPage {
     @Step("Проверка верификации ЛК2")
     public void verification() {
         open("ru/");
-        $(byText("Вход")).waitUntil(Condition.visible, 15000).click();
-        $(byName("phone")).waitUntil(Condition.visible, 15000).setValue("7070310755");
-        $(by("type", "submit")).waitUntil(Condition.visible, 15000).click();
+        $(byText("Вход")).click();
+        $(byName("phone")).setValue("7070310755");
+        $(by("type", "submit")).click();
 //        System.out.println($(withText("Мобильный номер не верифицирован.")).getText());
         $(withText("Мобильный номер не верифицирован.")).click();
         $(withText("Мобильный номер не верифицирован."))
