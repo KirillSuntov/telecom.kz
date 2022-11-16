@@ -70,6 +70,7 @@ public class BaseSetings {
         Configuration.baseUrl = "https://telecom.kz/";
 //        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
         Configuration.timeout= 80000;
+        Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
         Configuration.headless = true;
         Configuration.holdBrowserOpen = false;
