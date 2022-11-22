@@ -57,7 +57,7 @@ public class BaseSetings {
         System.out.println(webdriver().driver().url());
         pageurl= webdriver().driver().url();
         info("URL последней страницы: "+pageurl);
-        Selenide.closeWebDriver();
+//        Selenide.closeWebDriver();
 
     }
 
@@ -70,10 +70,10 @@ public class BaseSetings {
         Configuration.baseUrl = "https://telecom.kz/";
 //        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
         Configuration.timeout= 80000;
-        Configuration.pageLoadTimeout=80000;
+        Configuration.pageLoadTimeout=30000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = true;
-        Configuration.holdBrowserOpen = true;
+        Configuration.headless = false;
+        Configuration.holdBrowserOpen = false;
 
         if (CLEAR_REPORTS_DIR) {
             File allureScreenShots = new File("build/reports/tests");
