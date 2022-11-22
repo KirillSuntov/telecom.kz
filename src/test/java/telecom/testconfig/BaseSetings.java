@@ -73,8 +73,7 @@ public class BaseSetings {
         Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
         Configuration.headless = true;
-        Configuration.holdBrowserOpen = false;
-
+        Configuration.holdBrowserOpen = true;
 
         if (CLEAR_REPORTS_DIR) {
             File allureScreenShots = new File("build/reports/tests");

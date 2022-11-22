@@ -172,7 +172,7 @@ public class SmokeTest extends BaseSetings {
     public void checkVas() {
         Adm adm = new Adm();
         adm.logInLk2(login, password); //
-           $(byCssSelector("body")).sendKeys(Keys.CONTROL + "t");
+//           $(byCssSelector("body")).sendKeys(Keys.CONTROL + "t");
         adm.vasPage().CheckALL();
     }
 
