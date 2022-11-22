@@ -57,6 +57,8 @@ public class BaseSetings {
         System.out.println(webdriver().driver().url());
         pageurl= webdriver().driver().url();
         info("URL последней страницы: "+pageurl);
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
 //        Selenide.closeWebDriver();
 
     }
