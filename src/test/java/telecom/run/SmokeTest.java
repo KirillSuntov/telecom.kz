@@ -1,6 +1,7 @@
 package telecom.run;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -202,7 +203,7 @@ public class SmokeTest extends BaseSetings {
         adm.discrequestButton().CheckBody();
     }
 
-    @Test
+//    @Test
     @DisplayName("Проверка лэндинга VoLTE")
     public void voLTEPage() {
         Adm adm = new Adm();
