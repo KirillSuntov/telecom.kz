@@ -1,6 +1,5 @@
 package telecom.pages;
 
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import static com.codeborne.selenide.Condition.*;
@@ -11,7 +10,6 @@ import static telecom.testconfig.BaseSetings.pause;
 
 public class VoLTEPage {
     public void CheckBody() {
-
         open("");
         routetotheVolte();
         textcontentVolteCheck();
