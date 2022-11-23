@@ -203,7 +203,7 @@ public class SmokeTest extends BaseSetings {
         adm.discrequestButton().CheckBody();
     }
 
-    @Test
+//    @Test
     @DisplayName("Проверка лэндинга VoLTE")
     public void voLTEPage() {
         Adm adm = new Adm();
@@ -220,6 +220,6 @@ public class SmokeTest extends BaseSetings {
         adm.mainPageFromMobile().CheckFooterRu();
         adm.mainPageFromMobile().CheckHeaderKk();
         adm.mainPageFromMobile().CheckFooterKk();
-        Configuration.browserSize = "1300x1080";
+//        Configuration.browserSize = "1300x1080";
     }
 }
