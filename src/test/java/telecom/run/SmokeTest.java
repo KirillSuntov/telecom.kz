@@ -213,7 +213,7 @@ public class SmokeTest extends BaseSetings {
     @Test
     @DisplayName("Проверка главной страницы с эмуляцией мобильного устройства")
     public void mainPageFromMobile() {
-        Configuration.browserSize = "360x740";
+//        Configuration.browserSize = "360x740";
         Adm adm = new Adm();
         open("ru/");
         adm.mainPageFromMobile().CheckHeaderRu();

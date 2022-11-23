@@ -11,8 +11,7 @@ import static telecom.testconfig.BaseSetings.pause;
 
 public class VoLTEPage {
     public void CheckBody() {
-        refresh();
-        Configuration.browserSize = "1300x1080";
+
         open("");
         routetotheVolte();
         textcontentVolteCheck();
