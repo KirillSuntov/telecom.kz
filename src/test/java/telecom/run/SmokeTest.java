@@ -203,14 +203,14 @@ public class SmokeTest extends BaseSetings {
         adm.discrequestButton().CheckBody();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка лэндинга VoLTE")
     public void voLTEPage() {
         Adm adm = new Adm();
         Adm.voLTEPage().CheckBody();
     }
 
-    @Test
+//    @Test
     @DisplayName("Проверка главной страницы с эмуляцией мобильного устройства")
     public void mainPageFromMobile() {
         Configuration.browserSize = "360x740";

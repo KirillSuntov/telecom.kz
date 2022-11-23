@@ -40,6 +40,7 @@ public class BaseSetings {
 
     @Before
     public void setUp() {
+        Configuration.browserSize = "1300x1080";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
 
     }
