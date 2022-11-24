@@ -168,7 +168,7 @@ public class SmokeTest extends BaseSetings {
         pause(5000);
     }
 
-       @Test
+//       @Test
     @DisplayName("Проверка подключения дополнительных услуг")
     public void checkVas() {
         Adm adm = new Adm();
