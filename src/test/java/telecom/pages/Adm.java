@@ -103,5 +103,10 @@ public class Adm extends BaseSetings {
         return mainPageFromMobile;
     }
 
+    public NewCCTVFunctional newCCTVFunctional(){
+        NewCCTVFunctional newCCTVFunctional = new NewCCTVFunctional();
+        return newCCTVFunctional;
+    }
+
 
 }
