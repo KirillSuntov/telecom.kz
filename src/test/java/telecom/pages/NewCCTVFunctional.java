@@ -22,7 +22,7 @@ public class NewCCTVFunctional {
         $(byId("phone")).clear();
         $(byId("phone")).sendKeys("7007144012");
         $(byText("Продолжить")).click();
-        $(By.xpath("//input[@name='password']")).sendKeys("Test10412510");
+        $(By.xpath("//input[@name='password']")).sendKeys("Test4012");
         $(byXpath("//button[@type='submit']")).click();
     }
 
