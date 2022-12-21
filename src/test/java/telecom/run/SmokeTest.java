@@ -203,7 +203,7 @@ public class SmokeTest extends BaseSetings {
         adm.discrequestButton().CheckBody();
     }
 
-    @Test
+//    @Test
     @DisplayName("Проверка лэндинга VoLTE")
     public void voLTEPage() {
         Adm adm = new Adm();

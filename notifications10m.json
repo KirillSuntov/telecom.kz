@@ -1,0 +1,17 @@
+{
+  "base": {
+	"logo": "logo-kazahtelekom_mini.png",
+    "project": "Тест каждые 10 минут",
+    "environment": "https://telecom.kz/",
+    "comment": "Тестирования авторизации ЛК1, ЛК2 и доступности портала каждые 10 минут",
+    "reportLink": "https://jenkins.telecom.kz/job/Telecom_10m_Test/",
+    "language": "ru",
+    "allureFolder": "allure-report/",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "5420924257:AAHuxz3gimoARCt-aXjrgiGK3Yr2dyyDOZQ",
+    "chat": "-737885006",
+    "replyTo": ""
+  }
+}
