@@ -47,7 +47,9 @@ public class SmsLogPage extends BaseSetings {
         //-------------------------------
 
 
-
+       $(byCssSelector("body")).sendKeys(Keys.CONTROL + "t");
+//        Driver.FindElement(By.CssSelector("body")).SendKeys(Keys.Control + "t");
+//        Driver.SwitchTo().Window(DriverManager.Driver.WindowHandles.Last());
 //        browser1 = new SelenideDriver(new SelenideConfig().browser(browser));
         browser2 = new SelenideDriver(new SelenideConfig().browser(browser));
 
