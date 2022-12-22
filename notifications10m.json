@@ -1,6 +1,6 @@
 {
   "base": {
-	"logo": "logo-kazahtelekom_mini.png",
+	"logo": "logo-kazahtelekom_mini_n.png",
     "project": "",
     "environment": "https://telecom.kz/",
     "comment": "Тестирования авторизации ЛК1, ЛК2 и доступности портала каждые 10 минут",
