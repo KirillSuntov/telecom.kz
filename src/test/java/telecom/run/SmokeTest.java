@@ -222,4 +222,13 @@ public class SmokeTest extends BaseSetings {
         adm.mainPageFromMobile().CheckFooterKk();
 //        Configuration.browserSize = "1300x1080";
     }
+
+    @Test
+    @DisplayName("Проверка функционала ОВН (Внутри ЛК)")
+    public void newCCTVFunctional() {
+        Adm adm = new Adm();
+        adm.newCCTVFunctional().WholeCCTV();
+
+    }
+
 }
