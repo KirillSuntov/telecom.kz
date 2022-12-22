@@ -1,7 +1,7 @@
 {
   "base": {
 	"logo": "logo-kazahtelekom_mini.png",
-    "project": "Тест доступновти и авторизации каждые 10 минут",
+    "project": "",
     "environment": "https://telecom.kz/",
     "comment": "Тестирования авторизации ЛК1, ЛК2 и доступности портала каждые 10 минут",
     "reportLink": "https://jenkins.telecom.kz/job/Telecom_10m_Test/",
