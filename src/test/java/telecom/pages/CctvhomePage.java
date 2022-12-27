@@ -35,16 +35,16 @@ public class CctvhomePage {
         $$(byAttribute("type","submit")).last().click();
         pause(500);
         $(By.id("phone_number")).setValue("777777787778");
-        $(By.id("initial_phone_input_submit_button")).click();
-        $$(byClassName("videowatch__buttons")).last().$(byTagName("button")).click();
-        pause(500);
-        $(byName("iin")).setValue("111111111111");
-        $(byName("identity_card_id")).setValue("222222222");
-        $(byName("local_id")).setValue("333333");
-        pause(500);
-        $$(byClassName("phone-verification__tabs")).last().$(byTagName("button")).click();
-        $(By.id("videomonitoring___BV_modal_title_")).shouldHave(text("Подключение услуги \"Видеонаблюдение\". Ошибка верификации."));
-        pause(2000);
+//        $(By.id("initial_phone_input_submit_button")).click();
+//        $$(byClassName("videowatch__buttons")).last().$(byTagName("button")).click();
+//        pause(500);
+//        $(byName("iin")).setValue("111111111111");
+//        $(byName("identity_card_id")).setValue("222222222");
+//        $(byName("local_id")).setValue("333333");
+//        pause(500);
+//        $$(byClassName("phone-verification__tabs")).last().$(byTagName("button")).click();
+//        $(By.id("videomonitoring___BV_modal_title_")).shouldHave(text("Подключение услуги \"Видеонаблюдение\". Ошибка верификации."));
+//        pause(2000);
 //
     }
 }
