@@ -22,7 +22,11 @@ import static telecom.testconfig.BaseSetings.pause;
 
 public class ClientEquipPage {
     public void CheckBody() {
-        open("common/client-equip");
+//        open("common/client-equip");
+        $$(byXpath("//a[@href='/ru/common/internet']")).last().click();
+        pause(1000);
+        $(byXpath("//a[@href='/ru/common/client-equip']")).click();
+        pause(1000);
         tabCheck("ONT Модемы");
         tabCheck("ADSL Модемы");
         tabCheck("ТВ-Приставки");
