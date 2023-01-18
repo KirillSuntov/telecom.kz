@@ -73,8 +73,8 @@ public class EsimPage {
 
     }
 
-        @Step("Кнопки для переноса на пс и функционал ПС")
-        public void potentialdeal() {
+    @Step("Кнопки для переноса на пс и функционал ПС")
+    public void potentialdeal() {
         $$(byClassName("eSim__btn")).last().click();
         pause(2000);
         $(byXpath("//input[@id='phone_number']")).setValue("7751494255");
@@ -88,51 +88,51 @@ public class EsimPage {
     public void supporteddevices() {
 //  Кейс: устройство поддерживает eSim
 
-    $(byClassName("custom-select")).selectOptionByValue("altel");
-    pause(2000);
-    $$(byClassName("custom-select")).last().selectOptionByValue("iPhone XS");
-    pause(2000);
-    $(byText("Проверить")).click();
-    pause(1000);
-    $(byClassName("eSim__modal__success")).shouldHave(text("Поздравляем,"));
-    $(byText("понятно")).click();
-    pause(2000);
+        $(byClassName("custom-select")).selectOptionByValue("altel");
+        pause(2000);
+        $$(byClassName("custom-select")).last().selectOptionByValue("iPhone XS");
+        pause(2000);
+        $(byText("Проверить")).click();
+        pause(1000);
+        $(byClassName("eSim__modal__success")).shouldHave(text("Поздравляем,"));
+        $(byText("понятно")).click();
+        pause(2000);
 
 
 //  Кейс: устройство не поддерживает eSim
-    $(byClassName("custom-select")).selectOptionByValue("activ");
-    pause(2000);
-    $$(byClassName("custom-select")).last().selectOptionByValue("other");
-    pause(2000);
-    $(byText("Проверить")).click();
-    pause(1000);
-    $(byClassName("eSim__modal__failed")).shouldHave(text("к сожалению,"));
-    pause(2000);
-    $(byText("понятно")).click();
-    pause(2000);
+        $(byClassName("custom-select")).selectOptionByValue("activ");
+        pause(2000);
+        $$(byClassName("custom-select")).last().selectOptionByValue("other");
+        pause(2000);
+        $(byText("Проверить")).click();
+        pause(1000);
+        $(byClassName("eSim__modal__failed")).shouldHave(text("к сожалению,"));
+        pause(2000);
+        $(byText("понятно")).click();
+        pause(2000);
     }
 
     @Step("Переход на страницу eSIM QR")
     public void esimqr() {
-    $(byText("Подключить")).click();
-    pause(2000);
-    $(byText("eSIM")).getText();
+        $(byText("Подключить")).click();
+        pause(2000);
+        $(byText("eSIM")).getText();
     }
 
     @Step("Проверка кнопок, изображений и текста")
     public void esimqrbuttonsandtextcheck() {
-    $(byClassName("eSimQR__button")).shouldBe(visible);
-    pause(1000);
-    $$(byClassName("eSimQR__button")).last().click();
-    $(byClassName("eSimQR__header__svg")).shouldBe(visible);
-    $(byText("ИНСТРУКЦИЯ ПОДКЛЮЧЕНИЯ eSim")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone1.png']")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone2.png']")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone3.png']")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone4.png']")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone5.png']")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone6.png']")).shouldBe(visible);
-    $(byXpath("//img[@src='/img/main/esim/phone7.png']")).shouldBe(visible);
-    $(byClassName("eSimQR__price__total")).shouldBe(visible);
+        $(byClassName("eSimQR__button")).shouldBe(visible);
+        pause(1000);
+        $$(byClassName("eSimQR__button")).last().click();
+        $(byClassName("eSimQR__header__svg")).shouldBe(visible);
+        $(byText("ИНСТРУКЦИЯ ПОДКЛЮЧЕНИЯ eSim")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone1.png']")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone2.png']")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone3.png']")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone4.png']")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone5.png']")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone6.png']")).shouldBe(visible);
+        $(byXpath("//img[@src='/img/main/esim/phone7.png']")).shouldBe(visible);
+        $(byClassName("eSimQR__price__total")).shouldBe(visible);
     }
 }

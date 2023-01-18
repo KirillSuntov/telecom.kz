@@ -108,5 +108,10 @@ public class Adm extends BaseSetings {
         return newCCTVFunctional;
     }
 
+    public RoamingPage roamingPage(){
+        RoamingPage roamingPage = new RoamingPage();
+        return roamingPage;
+    }
+
 
 }

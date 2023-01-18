@@ -1,17 +1,12 @@
 package telecom.run;
 
-import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
-import org.openqa.selenium.Keys;
 import telecom.pages.Adm;
 import telecom.testconfig.BaseSetings;
 
-import static com.codeborne.selenide.Selectors.byCssSelector;
-import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -228,6 +223,16 @@ public class SmokeTest extends BaseSetings {
     public void newCCTVFunctional() {
         Adm adm = new Adm();
         adm.newCCTVFunctional().WholeCCTV();
+    }
+
+
+
+    @Test
+    @DisplayName("Проверка подключения роуминга")
+    public void roamingPage() {
+        Adm adm = new Adm();
+        adm.logInLk2(login, password);
+        adm.roamingPage().CheckAll();
 
     }
 
