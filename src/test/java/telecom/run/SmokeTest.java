@@ -218,7 +218,7 @@ public class SmokeTest extends BaseSetings {
 //        Configuration.browserSize = "1300x1080";
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка функционала ОВН (Внутри ЛК)")
     public void newCCTVFunctional() {
         Adm adm = new Adm();
