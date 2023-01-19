@@ -16,23 +16,31 @@ import static com.codeborne.selenide.Selenide.*;
 public class Auth extends BaseSetings {
 
 
-
     @Step("Авторизация в ЛК 2")
     public Auth logInLk2(String login, String password) {
-        Selenide.clearBrowserCookies();
-        Selenide.clearBrowserLocalStorage();
-        Configuration.browserSize = "1300x1080";
+
+//        Configuration.browserSize = "1300x1080";
         pause(2000);
         open("ru/");
+
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
-
+        if ($(byClassName("kt-nav__person")).isDisplayed()) {
+            $(byClassName("kt-nav__person")).click();
+            $$(byClassName("kt-nav__item_with-icon")).last().click();
+            Selenide.clearBrowserCookies();
+            Selenide.clearBrowserLocalStorage();
+            refresh();
+            pause(2000);
+//            open("ru/");
+            $(byText("Вход")).click();
+        }
         $(byName("phone")).setValue(login);
         System.out.println(webdriver().driver().url());
-        $(by("type","submit")).click();
+        $(by("type", "submit")).click();
         $(byName("password")).setValue(password);
         System.out.println(webdriver().driver().url());
-        $(by("type","submit")).click();//
+        $(by("type", "submit")).click();//
 
 //        pause(5000);
         return this;
@@ -48,7 +56,7 @@ public class Auth extends BaseSetings {
         $(byName("login")).setValue(login);
 //        $(by("type","submit")).click();
         $(byName("password")).setValue(password);
-        $(by("type","submit")).click();
+        $(by("type", "submit")).click();
 
         pause(5000);
         return this;
@@ -65,21 +73,14 @@ public class Auth extends BaseSetings {
 
         $(byName("phone")).setValue(realnikitalogin);
         System.out.println(webdriver().driver().url());
-        $(by("type","submit")).click();
+        $(by("type", "submit")).click();
         $(byName("password")).setValue(realnikitapassword);
         System.out.println(webdriver().driver().url());
-        $(by("type","submit")).click();//
+        $(by("type", "submit")).click();//
 
 //        pause(5000);
         return this;
     }
-
-
-
-
-
-
-
 
 
 //
@@ -101,7 +102,6 @@ public class Auth extends BaseSetings {
 //
 //        return this;
 //    }
-
 
 
 }
