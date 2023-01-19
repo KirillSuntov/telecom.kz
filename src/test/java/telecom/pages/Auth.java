@@ -19,6 +19,10 @@ public class Auth extends BaseSetings {
 
     @Step("Авторизация в ЛК 2")
     public Auth logInLk2(String login, String password) {
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
+        Configuration.browserSize = "1300x1080";
+        pause(2000);
         open("ru/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
