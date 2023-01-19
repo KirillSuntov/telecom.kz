@@ -46,7 +46,7 @@ public class BaseSetings {
     }
 
 
-    @After
+   @After
     @Step("Завершение теста")
     public void tearDown(){
         screenshot("123");
@@ -60,6 +60,7 @@ public class BaseSetings {
         info("URL последней страницы: "+pageurl);
         Selenide.clearBrowserCookies();
         Selenide.clearBrowserLocalStorage();
+       Configuration.browserSize = "1300x1080";
 //        Selenide.closeWebDriver();
 
     }
@@ -76,7 +77,6 @@ public class BaseSetings {
         Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
         Configuration.headless = true;
-
         Configuration.holdBrowserOpen = false;
 
 
