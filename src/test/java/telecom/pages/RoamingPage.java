@@ -14,6 +14,8 @@ public class RoamingPage {
     public void CheckAll() {
         checkbutton();
         checktarif();
+        connectRoaming();
+        disconnectRoaming();
     }
 
     @Step("Проверка наличия кнопок роуминга и детализации")

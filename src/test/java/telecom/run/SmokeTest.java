@@ -236,4 +236,22 @@ public class SmokeTest extends BaseSetings {
 
     }
 
+    @Test
+    @DisplayName("Процесс онбординга до проверки документов")
+    public void onboardingPage() {
+        Adm adm = new Adm();
+        open("ru/");
+        adm.onboardingPage().CheckAll();
+
+    }
+
+    @Test
+    @DisplayName("Проверка подключения FWA")
+    public void fwaltePage() {
+        Adm adm = new Adm();
+        open("ru/");
+        adm.fwaltePage().CheckAll();
+
+    }
+
 }

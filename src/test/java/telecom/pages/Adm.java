@@ -113,5 +113,15 @@ public class Adm extends BaseSetings {
         return roamingPage;
     }
 
+    public ОnboardingPage onboardingPage(){
+        ОnboardingPage onboardingPage = new ОnboardingPage();
+        return onboardingPage;
+    }
+
+    public FWALTEPage fwaltePage(){
+        FWALTEPage fwaltePage = new FWALTEPage();
+        return fwaltePage;
+    }
+
 
 }
