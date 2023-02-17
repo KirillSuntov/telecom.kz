@@ -24,6 +24,7 @@ public class NewCCTVFunctional {
         $(byText("Продолжить")).click();
         $(By.xpath("//input[@name='password']")).sendKeys("Test4012");
         $(byXpath("//button[@type='submit']")).click();
+        pause(3000);
     }
 
     @Step("Модуль видеонаблюдения и авторизация в Нетрис")
@@ -31,8 +32,9 @@ public class NewCCTVFunctional {
         $(byText("Лицевой счет 10412510")).click();
         $(byText("Видеонаблюдение в подъезде")).scrollTo().shouldBe(visible);
         $$(byClassName("kt-nav__link")).last().scrollTo().shouldBe(visible);
-        $$(byClassName("kt-nav__link")).last().click();
         pause(1000);
+        $$(byClassName("kt-nav__link")).last().click();
+        pause(2000);
 
         // Переход на iFrame с Нетрисом
         webdriver().driver().switchTo().frame(0);
