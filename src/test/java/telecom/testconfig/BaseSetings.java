@@ -76,7 +76,7 @@ public class BaseSetings {
         Configuration.timeout= 80000;
         Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 

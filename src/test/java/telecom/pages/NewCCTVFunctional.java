@@ -2,13 +2,15 @@ package telecom.pages;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
+import telecom.testconfig.BaseSetings;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
 
-public class NewCCTVFunctional {
+public class NewCCTVFunctional extends BaseSetings{
     public void WholeCCTV() {
         AuthCCTV();
         CCTVModule();
@@ -20,16 +22,16 @@ public class NewCCTVFunctional {
         open("");
         $$(byText("Вход")).last().click();
         $(byId("phone")).clear();
-        $(byId("phone")).sendKeys("7007144012");
+        $(byId("phone")).sendKeys(login);
         $(byText("Продолжить")).click();
-        $(By.xpath("//input[@name='password']")).sendKeys("Test4012");
+        $(By.xpath("//input[@name='password']")).sendKeys(password);
         $(byXpath("//button[@type='submit']")).click();
         pause(3000);
     }
 
     @Step("Модуль видеонаблюдения и авторизация в Нетрис")
     public void CCTVModule() {
-        $(byText("Лицевой счет 10412510")).click();
+        $(byText("Лицевой счет 60205")).click();
         $(byText("Видеонаблюдение в подъезде")).scrollTo().shouldBe(visible);
         $$(byClassName("kt-nav__link")).last().scrollTo().shouldBe(visible);
         pause(1000);
