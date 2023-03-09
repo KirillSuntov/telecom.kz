@@ -52,9 +52,9 @@ public class NewCCTVFunctional extends BaseSetings{
         pause(500);
 
         // Кнопка календаря
-        $(byCssSelector("#react-main-app > div > div > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(5) > div:nth-child(4)")).click();
-        pause(500);
-        $(byCssSelector("#react-main-app > div > div > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(5) > div:nth-child(4) > div > div > div > div:nth-child(5) > svg:nth-child(2) > path")).click();
+//        $(byCssSelector("#react-main-app > div > div > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(5) > div:nth-child(4)")).click();
+//        pause(500);
+//        $(byCssSelector("#react-main-app > div > div > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(5) > div:nth-child(4) > div > div > div > div:nth-child(5) > svg:nth-child(2) > path")).click();
 
         // Кнопка скриншота
         $(byXpath("//a[@class='snapshot']")).click();
