@@ -46,12 +46,12 @@ public class Auth extends BaseSetings {
         return this;
     }
 
-    @Step("Авторизация в ЛК 1")
+    @Step("Авторизация в ЛК 1 (по прямой ссылке)")
     public Auth logInLk1(String login, String password) {
-        open("ru/");
+        open("https://telecom.kz/ru/customer/by-login");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
-        $(byText("Вход")).click();
-        $(byText("Вход по городскому номеру")).click();
+//        $(byText("Вход")).click();
+//        $(byText("Вход по городскому номеру")).click();
 
         $(byName("login")).setValue(login);
 //        $(by("type","submit")).click();

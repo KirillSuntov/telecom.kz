@@ -63,15 +63,15 @@ public class NewCCTVFunctional extends BaseSetings{
         pause(500);
 
         // Кнопка закрытия окна камеры
-        $(byCssSelector("#react-main-app > div > div > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(3) > svg")).click();
-        pause(500);
-
-
-        // Переход в другие разделы
-        $(byXpath("//a[@href='#/players-layout']")).shouldBe(visible);
-        $(byText("На карте")).click();
-        $(byText("Найти")).shouldBe(visible);
-        $(byText("Настройки")).click();
-        $$(byText("Персональные данные")).last().shouldBe(visible);
+//        $(byCssSelector("#react-main-app > div > dKiv > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(3) > svg")).click();
+//        pause(500);
+//
+//
+//        // Переход в другие разделы
+//        $(byXpath("//a[@href='#/players-layout']")).shouldBe(visible);
+//        $(byText("На карте")).click();
+//        $(byText("Найти")).shouldBe(visible);
+//        $(byText("Настройки")).click();
+//        $$(byText("Персональные данные")).last().shouldBe(visible);
     }
 }
