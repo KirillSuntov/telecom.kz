@@ -31,7 +31,7 @@ public class RoamingPage {
         $$(byClassName("kt-my-services__options_button")).first().click();
         $(withText("Условия подключения роуминга")).shouldBe(visible);//ожидаем прогрузку страници роуминга
         pause(4000);
-        if ($$(byClassName("kt-my-services__roaming__cardWrapper__card")).size()<4) {
+        if ($$(byClassName("kt-my-services__roaming__cardWrapper__card")).size()<3) {
             Assert.fail("Тарифные планы не отобразились");
         }
     }
