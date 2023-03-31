@@ -17,6 +17,7 @@ public class Adm extends BaseSetings {
 
 
     public LKPage lkPage(){
+
         LKPage lkPage = new LKPage();
         return lkPage;
     }
