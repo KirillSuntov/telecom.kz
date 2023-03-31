@@ -9,6 +9,7 @@ public class Adm extends BaseSetings {
 
     public void logInLk1(String login, String password){
         new Auth().logInLk1(login, password);
+
     }
 
     public static void realnikitalogInlk2(String realnikitalogin, String realnikitapassword){
