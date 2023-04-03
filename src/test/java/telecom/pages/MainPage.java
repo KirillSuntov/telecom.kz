@@ -197,8 +197,8 @@ public class MainPage {
     @Step("Проверка онлайн каналов связи")
     public void CheckOnlineCommunications() {
         socialContactsButtons("Call center", "tel:160");
-        socialContactsButtons("whatsapp", "https://wa.me/77080000160");
-        socialContactsButtons("telegram", "https://t.me/TelecomKZBot");
+//        socialContactsButtons("Whatsapp", "https://wa.me/77080000160");
+        socialContactsButtons("Telegram", "https://t.me/TelecomKZBot");
         socialContactsButtons("Business", "https://www.ismet.kz/");
 //        socialContactsButtons("Сервис проверки ", "/ru/communications/status");
 
