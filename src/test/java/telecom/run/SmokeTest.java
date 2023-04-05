@@ -108,7 +108,7 @@ public class SmokeTest extends BaseSetings {
         adm.paymentPage().Payment();
     }
 //
-//    @Test
+    @Test
     @DisplayName("Проверка возможности оплаты через ЛК (без подтверждения оплаты)")
     public void LKpayPage() {
         Adm adm = new Adm();
@@ -154,7 +154,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка создания обращений")
     public void checkAppeal() {
         Adm adm = new Adm();
@@ -218,7 +218,7 @@ public class SmokeTest extends BaseSetings {
 //        Configuration.browserSize = "1300x1080";
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка функционала ОВН (Внутри ЛК)")
     public void newCCTVFunctional() {
         Adm adm = new Adm();
