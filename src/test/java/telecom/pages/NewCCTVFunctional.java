@@ -57,10 +57,10 @@ public class NewCCTVFunctional extends BaseSetings{
 //        $(byCssSelector("#react-main-app > div > div > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(5) > div:nth-child(4) > div > div > div > div:nth-child(5) > svg:nth-child(2) > path")).click();
 
         // Кнопка скриншота
-        $(byXpath("//a[@class='snapshot']")).click();
-        pause(500);
-        $(byXpath("//a[@class='snapshot']")).click();
-        pause(500);
+//        $(byXpath("//a[@class='snapshot']")).click();
+//        pause(500);
+//        $(byXpath("//a[@class='snapshot']")).click();
+//        pause(500);
 
         // Кнопка закрытия окна камеры
 //        $(byCssSelector("#react-main-app > div > dKiv > div:nth-child(3) > div:nth-child(2) > div > div > div:nth-child(3) > div > div.player-window-dialog > div > div > div > div:nth-child(3) > svg")).click();
