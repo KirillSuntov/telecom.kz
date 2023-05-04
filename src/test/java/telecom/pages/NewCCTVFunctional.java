@@ -10,6 +10,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
 
+
 public class NewCCTVFunctional extends BaseSetings{
     public void WholeCCTV() {
         AuthCCTV();
@@ -19,13 +20,14 @@ public class NewCCTVFunctional extends BaseSetings{
 
     @Step("Авторизация в учетную запись с технической возможностью")
     public void AuthCCTV() {
-        open("");
-        $$(byText("Вход")).last().click();
-        $(byId("phone")).clear();
-        $(byId("phone")).sendKeys(login);
-        $(byText("Продолжить")).click();
-        $(By.xpath("//input[@name='password']")).sendKeys(password);
-        $(byXpath("//button[@type='submit']")).click();
+//        open("");
+//        $$(byText("Вход")).last().click();
+//        $(byId("phone")).clear();
+//        $(byId("phone")).sendKeys(login);
+//        $(byText("Продолжить")).click();
+//        $(By.xpath("//input[@name='password']")).sendKeys(password);
+//        $(byXpath("//button[@type='submit']")).click();
+
         pause(3000);
     }
 

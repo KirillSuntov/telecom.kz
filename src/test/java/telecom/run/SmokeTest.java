@@ -222,6 +222,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка функционала ОВН (Внутри ЛК)")
     public void newCCTVFunctional() {
         Adm adm = new Adm();
+        adm.logInLk2(login, password);
         adm.newCCTVFunctional().WholeCCTV();
     }
 
