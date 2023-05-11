@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import telecom.testconfig.BaseSetings;
 //import sapasoft.reg.testconfigs.BaseSetings;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
@@ -25,6 +26,11 @@ public class Auth extends BaseSetings {
 
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
+        pause(15000);
+        if  ($(byText("ок")).isDisplayed()) {
+            $(byText("ок")).click();
+        };
+
         if ($(byClassName("kt-nav__person")).isDisplayed()) {
             $(byClassName("kt-nav__person")).click();
             $$(byClassName("kt-nav__item_with-icon")).last().click();
@@ -70,7 +76,10 @@ public class Auth extends BaseSetings {
         open("ru/");
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
-
+        pause(15000);
+        if  ($(byText("ок")).isDisplayed()) {
+            $(byText("ок")).click();
+        };
         $(byName("phone")).setValue(realnikitalogin);
         System.out.println(webdriver().driver().url());
         $(by("type", "submit")).click();
