@@ -22,7 +22,8 @@ public class DetailsPage {
 
 
     public void CheckDetails() {
-        $$(byClassName("kt-nav__link")).find(text("Детализация")).click();
+//        $$(byClassName("kt-nav__link")).find(text("Детализация")).click();
+        $(byText("Детализация")).click();
         CheckMobileDetails();
     }
 
