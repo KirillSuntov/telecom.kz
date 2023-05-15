@@ -90,7 +90,8 @@ public class SmokeTest extends BaseSetings {
         adm.logInLk2(login, password);
 //        adm.lkPage().CheckLk1();
 //
-        adm.detailsPage().CheckDetails();
+        adm.detailsPage().
+        CheckMobileDetails();
     }
 
     @Test
