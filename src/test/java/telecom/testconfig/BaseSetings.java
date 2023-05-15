@@ -74,7 +74,7 @@ public class BaseSetings {
         Configuration.browser = "chrome"; //firefox, edge,opera, ie
 //        Configuration.browser = "firefox";
         Configuration.baseUrl = "https://telecom.kz/";
-//        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/ru/";
+//        Configuration.baseUrl = "https://staging-srv-0.telecom.kz/";
         Configuration.timeout= 80000;
         Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
