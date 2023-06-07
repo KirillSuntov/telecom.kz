@@ -23,7 +23,7 @@ import static telecom.testconfig.BaseSetings.technicalWorks;
 public class EsimPage {
 
     public void CheckBody() {
-        open("");
+        open("");technicalWorks();
         pause(2000);
         routetoEsim();
         imgandtext();

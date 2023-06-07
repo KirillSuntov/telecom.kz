@@ -51,7 +51,7 @@ public class ResetPage extends SmsLogPage {
 
     @Step("Проверка верификации ЛК2")
     public void verification() {
-        open("ru/");
+        open("ru/");technicalWorks();
         $(byText("Вход")).click();
         $(byName("phone")).setValue("7070310755");
         $(by("type", "submit")).click();
