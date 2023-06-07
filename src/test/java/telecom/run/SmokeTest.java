@@ -46,7 +46,7 @@ public class SmokeTest extends BaseSetings {
 ////        adm.lkPage().CheckLk1();
 //    }
 //
-//    @Test
+    @Test
     @DisplayName("Проверка верификации пользователя ЛК2")
     public void checkVerificationLk2() {
         Adm adm = new Adm();
@@ -54,7 +54,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка авторизации ЛК1")
     public void checkLoginLk1() {
         Adm adm = new Adm();
@@ -62,7 +62,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка главной страницы")
     public void checkMain() {
         Adm adm = new Adm();
@@ -74,7 +74,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы мобильного приложения")
     public void checkMobile() {
         Adm adm = new Adm();
@@ -94,7 +94,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы \"Видеонаблюдение в подъезде\"")
     public void checkCctv() {
         Adm adm = new Adm();
@@ -102,14 +102,14 @@ public class SmokeTest extends BaseSetings {
         adm.cctvhomePage().CheckBody();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка возможности оплаты через неавторизованную зону (без подтверждения оплаты)")
     public void payPage() {
         Adm adm = new Adm();
         adm.paymentPage().Payment();
     }
 //
-//    @Test
+    @Test
     @DisplayName("Проверка возможности оплаты через ЛК (без подтверждения оплаты)")
     public void LKpayPage() {
         Adm adm = new Adm();
@@ -118,7 +118,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка онлайн каналов связи")
     public void checkMainOnlineCommunications() {
         Adm adm = new Adm();
@@ -126,7 +126,7 @@ public class SmokeTest extends BaseSetings {
         adm.mainPage().CheckOnlineCommunications();
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка технической возможности подключения")
     public void checkTechnicalCheck() {
         Adm adm = new Adm();
@@ -136,7 +136,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы клиенсткого оборудования")
     public void checkClientEquip() {
         Adm adm = new Adm();
@@ -145,7 +145,7 @@ public class SmokeTest extends BaseSetings {
         pause(1000);
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы контакты")
     public void checkContacts() {
         Adm adm = new Adm();
@@ -155,7 +155,7 @@ public class SmokeTest extends BaseSetings {
     }
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка создания обращений")
     public void checkAppeal() {
         Adm adm = new Adm();
@@ -173,7 +173,7 @@ public class SmokeTest extends BaseSetings {
 //        adm.vasPage().CheckALL();
 //    }
 
-//    @Test
+    @Test
     @DisplayName("Проверка страницы E-sim")
     public void checkEsim() {
         Adm adm = new Adm();
@@ -190,7 +190,7 @@ public class SmokeTest extends BaseSetings {
 //        adm.cctvFun().CheckBody();
 //
 //    }
-//    @Test
+    @Test
     @DisplayName("Проверка создания заявки на отключение услуги")
     public void discrequestButton() {
         Adm adm = new Adm();
@@ -206,7 +206,7 @@ public class SmokeTest extends BaseSetings {
 //        Adm.voLTEPage().CheckBody();
 //    }
 
-//    @Test
+    @Test
     @DisplayName("Проверка главной страницы с эмуляцией мобильного устройства")
     public void mainPageFromMobile() {
 //        Configuration.browserSize = "360x740";
@@ -219,7 +219,7 @@ public class SmokeTest extends BaseSetings {
 //        Configuration.browserSize = "1300x1080";
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка функционала ОВН (Внутри ЛК)")
     public void newCCTVFunctional() {
         Adm adm = new Adm();
@@ -229,7 +229,7 @@ public class SmokeTest extends BaseSetings {
 
 
 
-//    @Test
+    @Test
     @DisplayName("Проверка подключения роуминга")
     public void roamingPage() {
         Adm adm = new Adm();
@@ -238,7 +238,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Процесс онбординга до проверки документов")
     public void onboardingPage() {
         Adm adm = new Adm();
@@ -247,7 +247,7 @@ public class SmokeTest extends BaseSetings {
 
     }
 
-//    @Test
+    @Test
     @DisplayName("Проверка подключения FWA")
     public void fwaltePage() {
         Adm adm = new Adm();
