@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Screenshots;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import com.codeborne.selenide.selector.ByAttribute;
 import com.google.common.io.Files;
 //import com.sun.tools.javac.util.Log;
 import io.qameta.allure.Attachment;
@@ -25,8 +26,7 @@ import java.util.Objects;
 import java.util.Random;
 
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selectors.byId;
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BaseSetings {
@@ -148,7 +148,7 @@ public class BaseSetings {
         System.out.println("проверяем окно заглушки");
         if  ($(byId("technicalWorks___BV_modal_content_")).is(visible)) {
             System.out.println("заглушка есть");
-            $(byId("technicalWorks___BV_modal_content_")).$(byText("ок")).click();
+            $(byId("technicalWorks___BV_modal_footer_")).$(by("type","button")).click();
         };
     }
 
