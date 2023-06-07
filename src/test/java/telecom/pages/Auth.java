@@ -77,8 +77,8 @@ public class Auth extends BaseSetings {
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
         pause(15000);
-        if  ($(byText("ок")).is(visible)) {
-            $(byText("ок")).click();
+        if  ($(byId("technicalWorks___BV_modal_content_")).is(visible)) {
+            $(byId("technicalWorks___BV_modal_content_")).$(byText("ок")).click();
         };
         $(byName("phone")).setValue(realnikitalogin);
         System.out.println(webdriver().driver().url());
