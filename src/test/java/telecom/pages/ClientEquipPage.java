@@ -18,14 +18,15 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
+import static telecom.testconfig.BaseSetings.technicalWorks;
 
 
 public class ClientEquipPage {
     public void CheckBody() {
 //        open("common/client-equip");
-        $$(byXpath("//a[@href='/ru/common/internet']")).last().click();
+        $$(byXpath("//a[@href='/ru/common/internet']")).last().click();   technicalWorks();
         pause(1000);
-        $(byXpath("//a[@href='/ru/common/client-equip']")).click();
+        $(byXpath("//a[@href='/ru/common/client-equip']")).click();   technicalWorks();
         pause(1000);
         tabCheck("ONT Модемы");
         tabCheck("ADSL Модемы");

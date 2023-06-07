@@ -18,11 +18,15 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
+import static telecom.testconfig.BaseSetings.technicalWorks;
 
-public class CctvhomePage {
+public class CctvhomePage{
 
     public void CheckBody() {
-        open("services/cctv-home");
+
+
+
+        open("services/cctv-home");     technicalWorks();
         pause(5000);
 //        $(withText("Видеонаблюдение в подъезде")).click();
         submitButton();

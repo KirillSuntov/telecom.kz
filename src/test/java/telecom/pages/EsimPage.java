@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
+import static telecom.testconfig.BaseSetings.technicalWorks;
 
 public class EsimPage {
 
@@ -35,8 +36,8 @@ public class EsimPage {
 
     @Step("Путь на страницу esim")
     public void routetoEsim() {
-        $$(byXpath("//a[@href='/ru/services/volte']")).last().click();
-        $$(byXpath("//a[@href='/ru/services/e-sim']")).first().click();
+        $$(byXpath("//a[@href='/ru/services/volte']")).last().click(); technicalWorks();
+        $$(byXpath("//a[@href='/ru/services/e-sim']")).first().click(); technicalWorks();
     }
 
     @Step("Проверить изображения и текст на странице")

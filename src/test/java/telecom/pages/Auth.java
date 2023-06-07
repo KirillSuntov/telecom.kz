@@ -26,7 +26,7 @@ public class Auth extends BaseSetings {
 
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
-        pause(15000);
+        pause(5000);
         technicalWorks();
 
         if ($(byClassName("kt-nav__person")).isDisplayed()) {
@@ -52,7 +52,7 @@ public class Auth extends BaseSetings {
 
     @Step("Авторизация в ЛК 1 (по прямой ссылке)")
     public Auth logInLk1(String login, String password) {
-        open("https://telecom.kz/ru/customer/by-login");
+        open("https://telecom.kz/ru/customer/by-login"); technicalWorks();
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
 //        $(byText("Вход")).click();
 //        $(byText("Вход по городскому номеру")).click();

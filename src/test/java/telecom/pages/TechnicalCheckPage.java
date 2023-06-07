@@ -18,6 +18,7 @@ import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
+import static telecom.testconfig.BaseSetings.technicalWorks;
 
 public class TechnicalCheckPage {
 
@@ -29,7 +30,9 @@ public class TechnicalCheckPage {
 
     @Step("Заполнение данных при наличии технической возможности")
     public  void positiveCheck() {
-        open("technical-check");
+
+
+        open("technical-check");    technicalWorks();
         $(byName("town_state_id")).setValue("Аст");
         pause(500);
         $$(byText("Астана")).last().click();
@@ -46,7 +49,7 @@ public class TechnicalCheckPage {
 
     @Step("Заполнение данных при отсутствии технической возможности")
     public  void negativeCheck() {
-        open("technical-check");
+        open("technical-check");     technicalWorks();
         $(byName("town_state_id")).setValue("Аст");
         pause(500);
         $$(byText("Астана")).last().click();
