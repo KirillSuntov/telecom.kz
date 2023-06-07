@@ -24,6 +24,9 @@ import java.util.Date;
 import java.util.Objects;
 import java.util.Random;
 
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class BaseSetings {
@@ -79,7 +82,7 @@ public class BaseSetings {
         Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
 
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 
@@ -136,7 +139,16 @@ public class BaseSetings {
     public void info(String info) {
         System.out.print(info);
 
+
+
     }
+
+    public static void technicalWorks() {
+        if  ($(byId("technicalWorks___BV_modal_content_")).is(visible)) {
+            $(byId("technicalWorks___BV_modal_content_")).$(byText("ок")).click();
+        };
+    }
+
     public static void pause(long sec) {
         if (sec > 3000) {
             System.out.println("pause - " + sec + "\n");

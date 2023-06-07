@@ -7,6 +7,9 @@ import org.junit.runners.MethodSorters;
 import telecom.pages.Adm;
 import telecom.testconfig.BaseSetings;
 
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -19,7 +22,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Доступность портала")//
     public void checMainPage() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.mainPage().CheckHeaderRu();
         adm.mainPage().CheckFooterRu();
         adm.mainPage().CheckHeaderKk();
@@ -66,7 +69,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка главной страницы")
     public void checkMain() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.mainPage().CheckHeaderRu();
         adm.mainPage().CheckFooterRu();
         adm.mainPage().CheckHeaderKk();
@@ -78,7 +81,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы мобильного приложения")
     public void checkMobile() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.mobilePage().CheckBody();
     }
 
@@ -86,7 +89,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы детализации")
     public void checkDetails() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.logInLk2(login, password);
 //        adm.lkPage().CheckLk1();
 //
@@ -98,7 +101,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы \"Видеонаблюдение в подъезде\"")
     public void checkCctv() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.cctvhomePage().CheckBody();
     }
 
@@ -122,7 +125,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка онлайн каналов связи")
     public void checkMainOnlineCommunications() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.mainPage().CheckOnlineCommunications();
     }
 
@@ -130,7 +133,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка технической возможности подключения")
     public void checkTechnicalCheck() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.technicalCheckPage().CheckBody();
         pause(1000);
     }
@@ -140,7 +143,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы клиенсткого оборудования")
     public void checkClientEquip() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.clientEquipPage().CheckBody();
         pause(1000);
     }
@@ -149,7 +152,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы контакты")
     public void checkContacts() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.contactsPage().CheckBody();
         pause(1000);
     }
@@ -211,7 +214,7 @@ public class SmokeTest extends BaseSetings {
     public void mainPageFromMobile() {
 //        Configuration.browserSize = "360x740";
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.mainPageFromMobile().CheckHeaderRu();
         adm.mainPageFromMobile().CheckFooterRu();
         adm.mainPageFromMobile().CheckHeaderKk();
@@ -242,7 +245,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Процесс онбординга до проверки документов")
     public void onboardingPage() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.onboardingPage().CheckAll();
 
     }
@@ -251,7 +254,7 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка подключения FWA")
     public void fwaltePage() {
         Adm adm = new Adm();
-        open("ru/");
+        open("ru/");technicalWorks();
         adm.fwaltePage().CheckAll();
 
     }
