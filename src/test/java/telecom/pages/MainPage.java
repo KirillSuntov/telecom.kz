@@ -198,7 +198,7 @@ public class MainPage {
     public void CheckOnlineCommunications() {
         socialContactsButtons("Call center", "tel:160");
 //        socialContactsButtons("Whatsapp", "https://wa.me/77080000160");
-        socialContactsButtons("Telegram", "https://t.me/TelecomKZBot");
+//        socialContactsButtons("Telegram", "https://t.me/TelecomKZBot");
         socialContactsButtons("Business", "https://www.ismet.kz/");
 //        socialContactsButtons("Сервис проверки ", "/ru/communications/status");
 
