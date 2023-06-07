@@ -144,7 +144,10 @@ public class BaseSetings {
     }
 
     public static void technicalWorks() {
+        pause(2000);
+        System.out.println("проверяем окно заглушки");
         if  ($(byId("technicalWorks___BV_modal_content_")).is(visible)) {
+            System.out.println("заглушка есть");
             $(byId("technicalWorks___BV_modal_content_")).$(byText("ок")).click();
         };
     }
