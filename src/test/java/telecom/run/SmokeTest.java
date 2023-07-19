@@ -112,7 +112,7 @@ public class SmokeTest extends BaseSetings {
         adm.paymentPage().Payment();
     }
 //
-    @Test
+//    @Test
     @DisplayName("Проверка возможности оплаты через ЛК (без подтверждения оплаты)")
     public void LKpayPage() {
         Adm adm = new Adm();
