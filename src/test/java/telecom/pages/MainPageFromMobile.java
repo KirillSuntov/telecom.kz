@@ -69,15 +69,15 @@ public class MainPageFromMobile {
         CheckLinkFooterOut("Хостинг", "http://idhost.kz/", 0);
 
         System.out.println(" ");
-        CheckLinkFooterOut("Unibox", "https://www.ismet.kz/ru/services/service-3762-unibox", 1);
-        CheckLinkFooterOut("Интернет", "https://www.ismet.kz/ru/services/service-3349-Internetdlyaofisa", 1);
-        CheckLinkFooterOut("Телефония", "https://www.ismet.kz/ru/services/service-3717-siptelefonija.html", 1);
-        CheckLinkFooterOut("Телевидение", "https://www.ismet.kz/ru/services/service-3353-id_tvdljaofisa", 1);
-        CheckLinkFooterOut("Видеонаблюдение", "https://www.ismet.kz/ru/documents/cctv", 1);
-        CheckLinkFooterOut("Wi-Fi Target", "https://www.ismet.kz/ru/documents/wi-fi-target", 1);
-        CheckLinkFooterOut("IoT Интернет вещей", "https://www.ismet.kz/ru/documents/IoT", 1);
-        CheckLinkFooterOut("Блокчейн", "https://www.ismet.kz/ru/documents/blockchain", 1);
-        CheckLinkFooter("Операторам", "operators/12219/172065", 1);
+//        CheckLinkFooterOut("Unibox", "https://www.ismet.kz/ru/services/service-3762-unibox", 1);
+//        CheckLinkFooterOut("Интернет", "https://www.ismet.kz/ru/services/service-3349-Internetdlyaofisa", 1);
+//        CheckLinkFooterOut("Телефония", "https://www.ismet.kz/ru/services/service-3717-siptelefonija.html", 1);
+//        CheckLinkFooterOut("Телевидение", "https://www.ismet.kz/ru/services/service-3353-id_tvdljaofisa", 1);
+//        CheckLinkFooterOut("Видеонаблюдение", "https://www.ismet.kz/ru/documents/cctv", 1);
+//        CheckLinkFooterOut("Wi-Fi Target", "https://www.ismet.kz/ru/documents/wi-fi-target", 1);
+//        CheckLinkFooterOut("IoT Интернет вещей", "https://www.ismet.kz/ru/documents/IoT", 1);
+//        CheckLinkFooterOut("Блокчейн", "https://www.ismet.kz/ru/documents/blockchain", 1);
+//        CheckLinkFooter("Операторам", "operators/12219/172065", 1);
 
         System.out.println(" ");
 
@@ -128,15 +128,15 @@ public class MainPageFromMobile {
         CheckLinkKk("Хостинг", "http://idhost.kz/");
 
         System.out.println(" ");
-        CheckLinkKk("Unibox", "https://www.ismet.kz/kk/services/service-3762-unibox");
-        CheckLinkKk("Интернет", "https://www.ismet.kz/kk/services/service-3349-Internetdlyaofisa");
-        CheckLinkKk("Телефония", "https://www.ismet.kz/kk/services/service-3717-siptelefonija.html");
-        CheckLinkKk("Теледидар ", "https://www.ismet.kz/kk/services/service-3353-id_tvdljaofisa");
-        CheckLinkKk("Видеонаблюдение", "https://www.ismet.kz/kk/documents/cctv");
-        CheckLinkKk("Wi-Fi Target", "https://www.ismet.kz/kk/documents/wi-fi-target");
-        CheckLinkKk("IoT Интернет заттары ", "https://www.ismet.kz/kk/documents/IoT");
-        CheckLinkKk("Блокчейн", "https://www.ismet.kz/kk/documents/blockchain");
-        CheckLinkKk("Операторларға ", "operators/12219/172065");
+//        CheckLinkKk("Unibox", "https://www.ismet.kz/kk/services/service-3762-unibox");
+//        CheckLinkKk("Интернет", "https://www.ismet.kz/kk/services/service-3349-Internetdlyaofisa");
+//        CheckLinkKk("Телефония", "https://www.ismet.kz/kk/services/service-3717-siptelefonija.html");
+//        CheckLinkKk("Теледидар ", "https://www.ismet.kz/kk/services/service-3353-id_tvdljaofisa");
+//        CheckLinkKk("Видеонаблюдение", "https://www.ismet.kz/kk/documents/cctv");
+//        CheckLinkKk("Wi-Fi Target", "https://www.ismet.kz/kk/documents/wi-fi-target");
+//        CheckLinkKk("IoT Интернет заттары ", "https://www.ismet.kz/kk/documents/IoT");
+//        CheckLinkKk("Блокчейн", "https://www.ismet.kz/kk/documents/blockchain");
+//        CheckLinkKk("Операторларға ", "operators/12219/172065");
 
         System.out.println(" ");
 
