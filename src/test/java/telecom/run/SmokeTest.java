@@ -193,6 +193,7 @@ public class SmokeTest extends BaseSetings {
 //        adm.cctvFun().CheckBody();
 //
 //    }
+
     @Test
     @DisplayName("Проверка создания заявки на отключение услуги")
     public void discrequestButton() {

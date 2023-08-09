@@ -26,7 +26,7 @@ public class AppealPage {
 //        open("customer/orders/histories/communications");
 
 
-        SendAppeal("Качество обслуживания");
+        SendAppeal("Качество сервиса");
 //        SendAppeal("Вопросы по начислениям");
 //        SendAppeal("Качество основных услуг");
     }
