@@ -157,10 +157,9 @@ public class ОnboardingPage {
         $(byClassName("qr")).shouldBe(visible);
         $(byClassName("qr__link")).click();
         $(byClassName("ui-form__input__mobile")).setValue("7077777778");
-        $(byName("town_state_id")).setValue("Астана").sendKeys(Keys.ARROW_UP);
-        $(byName("town_state_id")).sendKeys(Keys.ENTER);
-        $(byName("street")).setValue("ул. Е-753").sendKeys(Keys.ARROW_DOWN);
-        $(byName("street")).sendKeys(Keys.ENTER);
+        $(byName("town_state_id")).click();
+        $(byName("town_state_id")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        $(byName("street")).setValue("ул. Е-753").sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         $(byName("house")).setValue("1");
         $(byClassName("technicalForm__btn__primary")).click();
         $(byClassName("vue-otp")).shouldBe(visible);
