@@ -17,8 +17,9 @@ public class ОnboardingPage {
         CheckTarif();
         CheckKeremetTVPackageSettings();
         CheckBereketPackageSettings();
+        CheckOnboardingFail();
         CheckKeremetMobilePackageSettings();
-        CheckOnboarding();
+        CheckOnboardingSuccess();
     }
 
     @Step("Проверка отображения тарифов на главной странице")
@@ -149,19 +150,35 @@ public class ОnboardingPage {
         $(byClassName("package-settings-form__calculate__total-row")).shouldHave(text("8 899 ₸/в месяц"));
     }
 
-    @Step("Создание абонента Казахтелеком")
-    public void CheckOnboarding() {
+    @Step("Неуспешное создание абонента Казахтелеком")
+    public void CheckOnboardingFail() {
         $(byClassName("package-settings-form__btn__desk")).click();
         $(byId("FunctionalAccessWarningPopup___BV_modal_body_")).shouldBe(visible);
         $(byClassName("functionalAccessWarning__btn__primary")).click();
         $(byClassName("qr")).shouldBe(visible);
         $(byClassName("qr__link")).click();
-        $(byClassName("ui-form__input__mobile")).setValue("7077777778");
+        $(byClassName("ui-form__input__mobile")).setValue("7777777777");
         $(byName("town_state_id")).click();
         $(byName("town_state_id")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         $(byName("street")).setValue("ул. Е-753").sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         $(byName("house")).setValue("1");
-        $(byClassName("technicalForm__btn__primary")).click();
+        $(byClassName("technicalForm__btn__primary")).click() ;
+        $(byId("LeadExistPopup___BV_modal_body_")).shouldBe(visible);
+    }
+
+    @Step("Создание абонента Казахтелеком до отправки кода otp")
+    public void CheckOnboardingSuccess() {
+        $(byClassName("package-settings-form__btn__desk")).click();
+        $(byId("FunctionalAccessWarningPopup___BV_modal_body_")).shouldBe(visible);
+        $(byClassName("functionalAccessWarning__btn__primary")).click();
+        $(byClassName("qr")).shouldBe(visible);
+        $(byClassName("qr__link")).click();
+        $(byClassName("ui-form__input__mobile")).setValue("7077777771");
+        $(byName("town_state_id")).click();
+        $(byName("town_state_id")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        $(byName("street")).setValue("ул. Е-753").sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        $(byName("house")).setValue("1");
+        $(byClassName("technicalForm__btn__primary")).click() ;
         $(byClassName("vue-otp")).shouldBe(visible);
     }
 }
