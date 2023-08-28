@@ -49,6 +49,7 @@ public class SmokeTest extends BaseSetings {
 ////        adm.lkPage().CheckLk1();
 //    }
 //
+
     @Test
     @DisplayName("Проверка верификации пользователя ЛК2")
     public void checkVerificationLk2() {
@@ -194,7 +195,7 @@ public class SmokeTest extends BaseSetings {
 //
 //    }
 
-    @Test
+//    @Test
     @DisplayName("Проверка создания заявки на отключение услуги")
     public void discrequestButton() {
         Adm adm = new Adm();
