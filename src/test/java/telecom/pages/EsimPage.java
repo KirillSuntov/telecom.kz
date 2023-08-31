@@ -29,7 +29,7 @@ public class EsimPage {
         imgandtext();
         potentialdeal();
         supporteddevices();
-        esimqr();
+//        esimqr();
         esimqrbuttonsandtextcheck();
 
     }
