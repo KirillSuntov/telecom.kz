@@ -95,7 +95,6 @@ public class MainPage {
         CheckLinkFooter("О компании", "about/list?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("О нас", "pages/12090/171731?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Бизнес", "pages/11843/160211?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
-        CheckLinkFooter("Кадровая политика", "pages/11859/172331?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Инвесторам и акционерам", "pages/11893/172452?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Комплаенс", "pages/13695/172465?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Контакты", "contacts/list", 3);
@@ -154,7 +153,6 @@ public class MainPage {
             CheckLinkKk("Компания туралы", "about/list?utm_source=footer&utm_medium=org&utm_campaign=newlink");
             CheckLinkKk("Біз туралы", "pages/12090/171731?utm_source=footer&utm_medium=org&utm_campaign=newlink");
             CheckLinkKk("Кәсіпкерлік", "pages/11843/160211?utm_source=footer&utm_medium=org&utm_campaign=newlink");
-            CheckLinkKk("Кадрлық саясат", "pages/11859/172331?utm_source=footer&utm_medium=org&utm_campaign=newlink");
             CheckLinkKk("Инвесторларға, акционерлерге ", "pages/11893/172452?utm_source=footer&utm_medium=org&utm_campaign=newlink");
             CheckLinkKk("Комплаенс", "pages/13695/172465?utm_source=footer&utm_medium=org&utm_campaign=newlink");
             CheckLinkKk("Байланыстар", "contacts/list");
