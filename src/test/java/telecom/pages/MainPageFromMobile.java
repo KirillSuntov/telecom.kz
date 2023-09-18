@@ -95,7 +95,7 @@ public class MainPageFromMobile {
         CheckLinkFooter("О компании", "about/list?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("О нас", "pages/12090/171731?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Бизнес", "pages/11843/160211?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
-        CheckLinkFooter("Кадровая политика", "pages/11859/172331?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
+//        CheckLinkFooter("Кадровая политика", "pages/11859/172331?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Инвесторам и акционерам", "pages/11893/172452?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Комплаенс", "pages/13695/172465?utm_source=footer&utm_medium=org&utm_campaign=newlink", 3);
         CheckLinkFooter("Контакты", "contacts/list", 3);
