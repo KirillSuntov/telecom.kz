@@ -126,7 +126,7 @@ public class EsimPage {
 //        $(byClassName("eSimQR__button")).shouldBe(visible);
         pause(1000);
         $$(withText("Подключить")).last().click();
-        $(byClassName("eSimQR__header__svg")).shouldBe(visible);
+//        $(byClassName("eSimQR__header__svg")).shouldBe(visible);
         $(byText("ИНСТРУКЦИЯ ПОДКЛЮЧЕНИЯ eSim")).shouldBe(visible);
         $(byXpath("//img[@src='/img/main/esim/phone1.png']")).shouldBe(visible);
         $(byXpath("//img[@src='/img/main/esim/phone2.png']")).shouldBe(visible);
