@@ -123,9 +123,9 @@ public class EsimPage {
 
     @Step("Проверка кнопок, изображений и текста")
     public void esimqrbuttonsandtextcheck() {
-        $(byClassName("eSimQR__button")).shouldBe(visible);
+//        $(byClassName("eSimQR__button")).shouldBe(visible);
         pause(1000);
-        $$(byClassName("eSimQR__button")).last().click();
+        $$(withText("Подключить")).last().click();
         $(byClassName("eSimQR__header__svg")).shouldBe(visible);
         $(byText("ИНСТРУКЦИЯ ПОДКЛЮЧЕНИЯ eSim")).shouldBe(visible);
         $(byXpath("//img[@src='/img/main/esim/phone1.png']")).shouldBe(visible);
