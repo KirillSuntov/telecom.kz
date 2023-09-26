@@ -20,7 +20,7 @@ public class RoamingPage {
 
     @Step("Проверка наличия кнопок роуминга и детализации")
     public void checkbutton() {
-        $(withText("Altel, Тариф \"Практичный\" с закрытым профилем")).shouldBe(visible);//ожидаем прогрузку услуг
+        $(withText("Keremet Mobile 3")).shouldBe(visible);//ожидаем прогрузку услуг
         if ( $$(byClassName("kt-my-services__options_button")).size()<6) {
             Assert.fail("Кнопики роуминга не отобразились");
         }
