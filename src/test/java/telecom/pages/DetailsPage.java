@@ -35,7 +35,7 @@ public class DetailsPage {
         $(byId("number")).selectOption(0);
 
         $$(byAttribute("type", "submit")).find(text("30 дней")).click();
-        pause(6000);
+        pause(10000);
         if ($$(byClassName("table-detailing-date")).size() < 2) {
             Assert.fail("Детализация не отобразилась");
         }
