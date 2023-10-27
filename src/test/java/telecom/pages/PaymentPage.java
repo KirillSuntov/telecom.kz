@@ -74,7 +74,7 @@ public class PaymentPage {
     public void LSForm() {
         open("ru/");
         $("[class*=menu__payment]").click();
-        $(byName("abonent_id")).setValue("63279");
+        $(byName("abonent_id")).setValue("62505");
         pause(4000);
 
         System.out.println($(byName("amount")).getValue());
@@ -100,7 +100,7 @@ public class PaymentPage {
 
     @Step("Переход на оплату из ЛК2")
     public void LKForm() {
-        $(byText("Лицевой счет 63279")).click();
+        $(byText("Лицевой счет 62505")).click();
         pause(20000);
         $(byName("amount")).getValue();
         if ($(byName("amount")).getValue().length() > 1) {
