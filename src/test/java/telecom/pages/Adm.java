@@ -125,9 +125,9 @@ public class Adm extends BaseSetings {
         return fwaltePage;
     }
 
-    public AutoPaymentPage autopaymentPage(){
-        AutoPaymentPage autopaymentPage = new AutoPaymentPage();
-        return autopaymentPage;
+    public AutoPaymentPage autoPaymentPage(){
+        AutoPaymentPage autoPaymentPage = new AutoPaymentPage();
+        return autoPaymentPage;
     }
 
 }
