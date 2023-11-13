@@ -66,6 +66,80 @@ public class SmokeTest extends BaseSetings {
 
     }
 
+
+//    # Unregister Push Token
+//# mutation {
+//#     pushNotifications {
+//#         unregisterToken(customerId: 291234, platform: "ios", deviceId: "123123") {
+//#             result
+//#         }
+//#     }
+//# }
+
+
+//# Register Token
+//# mutation {
+//#   pushNotifications {
+//#     registerToken(
+//                    #       token: "dpYmJBv3YERHh5JuJ2m5dd:APA91bEVsfP3Ir9TQ9Yqc5Pa3LX4H37-_jF8xAIQAuJr204Gyhv7mT1v7a385A-fNxrad-tDGMx_HSOSsESdEJBTPu7vZfAGFACb_qhGHnLFFtDtjpVwA00lV3k4sweDhvOAfzL4QnXd"
+//#       customerId: 291234
+//#       platform: "ios"
+//#       deviceId: "123123"
+//#     ) {
+//#       token
+//#       platform
+//#       deviceId
+//#       customerId
+//#     }
+//#   }
+//# }
+
+//# GetNotificationsSetting
+//# {
+//#   pushNotifications {
+//#     getNotificationSetting(customerId: 291234, deviceId: "123123") {
+//#       customerId
+//#       deviceId
+//#       status
+//#     }
+//#   }
+//# }
+//
+//# UpdateNotificationSetting
+//# mutation {
+//#   pushNotifications {
+//#     updateNotificationSetting(customerId: 291234, deviceId: "123123", status: -1) {
+//#       customerId
+//#       deviceId
+//#       status
+//#     }
+//#   }
+//# }
+//
+//# GetUnreadNotificationsCount
+//# {
+//#     pushNotifications {
+//#         unreadNotificationsCount(customerId: 291234, deviceId: "123123") {
+//#             count
+//#         }
+//#     }
+//# }
+//
+//# UpdateNotificationsStatus
+//# mutation {
+//#   pushNotifications {
+//#     updateNotificationsStatus(
+//                    #       notificationIds: [10]
+//#       status: 2
+//#       deviceId: "123123"
+//#       customerId: 291234
+//#     ) {
+//#       result
+//#     }
+//#   }
+//# }
+//
+//#
     @Test
     @DisplayName("Проверка главной страницы")
     public void checkMain() {
@@ -261,4 +335,13 @@ public class SmokeTest extends BaseSetings {
 
     }
 
+    @Test
+    @DisplayName("Процесс автооплаты")
+    public void autopaymentPage() {
+        Adm adm = new Adm();
+        adm.autopaymentPage().CheckAll();
+    }
+
 }
+
+
