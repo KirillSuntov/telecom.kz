@@ -339,7 +339,9 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Процесс автооплаты")
     public void autopaymentPage() {
         Adm adm = new Adm();
-        adm.autoPaymentPage().CheckAll();
+        adm.autoPaymentPage().CreateAutoPayment();
+        adm.autoPaymentPage().UpdateAutoPayment();
+        adm.autoPaymentPage().DeleteAutoPayment();
     }
 
 }
