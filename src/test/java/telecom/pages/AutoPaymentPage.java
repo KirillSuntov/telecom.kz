@@ -112,6 +112,7 @@ public class AutoPaymentPage extends BaseSetings {
         $(byXpath("//*[@class='frame-kazaktelecom frame-kazaktelecom--save-card']")).shouldBe(visible);
         back();
         $(byClassName("t-checkbox")).click();
+        pause(1000);
 
     }
 
@@ -120,8 +121,11 @@ public class AutoPaymentPage extends BaseSetings {
 
         $(byXpath("(//*[@type='text'])[1]")).setValue("20000");
         $(byXpath("//*[@class='btn btn-primary']")).shouldHave(text("Продолжить")).click();
+        pause(1000);
         $(byXpath("//*[@class='modal-info confirm-modal']")).shouldBe(visible);
         $(byXpath("//*[@class='btn btn-secondary']")).click();
+//        $(byClassName("t-checkbox")).click();
+        pause(1000);
 
     }
 
@@ -129,8 +133,8 @@ public class AutoPaymentPage extends BaseSetings {
     public void CreatingAutoPayment() {
 
         $(byXpath("(//*[@type='text'])[1]")).setValue("200");
-        $(byXpath("//*[@class='btn btn-primary']")).shouldHave(text("Продолжить")).click();
         pause(1000);
+        $(byXpath("//*[@class='btn btn-primary']")).shouldHave(text("Продолжить")).click();
         $(byClassName("auto-payment-status")).shouldBe(visible);
         $(byXpath("//*[@class='btn btn-primary']")).click();
         $(byXpath("//*[@class='t-input t-input--disabled']")).shouldHave(text("Включен"));
@@ -144,6 +148,7 @@ public class AutoPaymentPage extends BaseSetings {
         $(byXpath("//*[@class='btn btn-secondary']")).click();
         $(byXpath("//*[@class='t-checkbox checked']")).click();
         $(byXpath("//*[@class='modal-info status-modal']")).shouldBe(visible);
+        pause(1000);
         $(byXpath("//*[@class='btn btn-primary']")).click();
         $(byXpath("//*[@class='t-input t-input--disabled']")).shouldHave(text("Отключен"));
 
@@ -164,8 +169,11 @@ public class AutoPaymentPage extends BaseSetings {
 
         $(byXpath("//*[@alt='credit-cart']")).click();
         $(byId("auto-payment-select-card___BV_modal_body_")).shouldBe(visible);
+        pause(3000);
         $(byXpath("//*[@class='t-checkbox checked']")).click();
+        pause(3000);
         $(byXpath("//*[@class='btn btn-primary']")).click();
+        pause(3000);
         $(byXpath("//*[@class='btn btn-secondary disabled']")).shouldHave(text("Применить настройки"));
 
     }
