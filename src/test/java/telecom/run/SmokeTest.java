@@ -318,6 +318,15 @@ public class SmokeTest extends BaseSetings {
     }
 
     @Test
+    @DisplayName("Проверка замены SIM-карты")
+    public void replaceSimPage() {
+        Adm adm = new Adm();
+        adm.logInLk2(login, password);
+        adm.replaceSimPage().CheckAll();
+
+    }
+
+    @Test
     @DisplayName("Процесс онбординга до проверки документов")
     public void onboardingPage() {
         Adm adm = new Adm();

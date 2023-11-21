@@ -115,6 +115,11 @@ public class Adm extends BaseSetings {
         return roamingPage;
     }
 
+    public ReplaceSimPage replaceSimPage(){
+        ReplaceSimPage replaceSimPage = new ReplaceSimPage();
+        return replaceSimPage;
+    }
+
     public ОnboardingPage onboardingPage(){
         ОnboardingPage onboardingPage = new ОnboardingPage();
         return onboardingPage;
