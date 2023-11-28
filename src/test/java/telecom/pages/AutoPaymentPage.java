@@ -24,6 +24,7 @@ public class AutoPaymentPage extends BaseSetings {
         HavingAutoPaymentCheck();
         MyAutoPaymentCheck();
         SmallSumCheck();
+        CalendarCheck();
         AddingCardCheck();
         BigSumCheck();
         CreatingAutoPayment();
@@ -100,6 +101,18 @@ public class AutoPaymentPage extends BaseSetings {
 
     }
 
+    @Step("Проверка настройки даты оплаты")
+    public void CalendarCheck() {
+
+        $(byXpath("//*[@alt='calendar']")).click();
+        pause(1000);
+        $(byId("auto-payment-modal-calendar___BV_modal_header_")).shouldBe(visible);
+        $(byXpath("//*[@class='calendar-header']/button[2]")).click();
+        $(byXpath("//*[@class='calendar-table']/tbody/tr[3]/td[1]")).click();
+        $(byXpath("//*[@class='btn btn-primary']")).click();
+
+    }
+
     @Step("Проверка добавления карты")
     public void AddingCardCheck() {
 
@@ -160,6 +173,7 @@ public class AutoPaymentPage extends BaseSetings {
         $(byXpath("//*[@class='btn btn-secondary']")).click();
         $(byXpath("//*[@alt='calendar']")).click();
         $(byId("auto-payment-modal-calendar___BV_modal_content_")).shouldBe(visible);
+        $(byXpath("//*[@class='calendar-table']/tbody/tr[3]/td[2]")).click();
         $(byXpath("//*[@class='btn btn-primary']")).click();
 
     }
