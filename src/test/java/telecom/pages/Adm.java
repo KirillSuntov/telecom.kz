@@ -38,6 +38,11 @@ public class Adm extends BaseSetings {
         return detailsPage;
     }
 
+    public DetailedBalance detailedBalance(){
+        DetailedBalance detailedBalance = new DetailedBalance();
+        return detailedBalance;
+    }
+
     public CctvhomePage cctvhomePage(){
         CctvhomePage cctvhomePage = new CctvhomePage();
         return cctvhomePage;

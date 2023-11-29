@@ -173,6 +173,18 @@ public class SmokeTest extends BaseSetings {
     }
 
     @Test
+    @DisplayName("Проверка детализированного баланса")
+    public void detailedBalance() {
+        Adm adm = new Adm();
+        adm.logInLk2(login, password);
+        adm.detailedBalance().PostPayCheck();
+        pause(30000);
+        adm.logInLk2(login2, password2);
+        adm.detailedBalance().PrePayCheck();
+    }
+
+
+    @Test
     @DisplayName("Проверка страницы \"Видеонаблюдение в подъезде\"")
     public void checkCctv() {
         Adm adm = new Adm();
