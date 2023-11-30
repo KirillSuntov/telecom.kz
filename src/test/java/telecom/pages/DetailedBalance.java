@@ -142,7 +142,7 @@ public class DetailedBalance extends BaseSetings {
 
         try {
 
-            File f = new File("build\\downloads");
+            File f = new File("Telecom_Daily_Test/build/downloads");
             File[] files = f.listFiles();
 
             if (files.length > 0) {
