@@ -21,7 +21,7 @@ public class DetailedBalance extends BaseSetings {
         checkNextMonth();
         checkBalance("PostPay");
         checkPayment("https://telecom.kz/ru/payment/dabe/202311?ca=4015145");
-        //checkPaymentDownloading();
+        checkPaymentDownloading();
     }
 
     public void PrePayCheck() {
@@ -29,7 +29,7 @@ public class DetailedBalance extends BaseSetings {
         checkThisMonth("");
         checkBalance("");
         checkPayment("https://telecom.kz/ru/payment/322c/202311?ca=11430969");
-        //checkPaymentDownloading();
+        checkPaymentDownloading();
     }
 
     @Step("Проверка заголовка модалки 'Детали баланса'")
