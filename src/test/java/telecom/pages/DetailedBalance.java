@@ -7,14 +7,14 @@ import telecom.testconfig.BaseSetings;
 
 import java.io.File;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selectors.by;
 import static com.codeborne.selenide.Selenide.*;
 import static telecom.testconfig.BaseSetings.pause;
 
 public class DetailedBalance extends BaseSetings {
+    @Step("Проверка детализации клиента с типом PostPay")
     public void PostPayCheck() {
         checkTitle("PostPay");
         checkThisMonth("PostPay");
@@ -23,7 +23,7 @@ public class DetailedBalance extends BaseSetings {
         checkPayment("https://telecom.kz/ru/payment/dabe/202311?ca=4015145");
         checkPaymentDownloading();
     }
-
+    @Step("Проверка детализации клиента с типом PrePay")
     public void PrePayCheck() {
         checkTitle("");
         checkThisMonth("");
@@ -125,6 +125,13 @@ public class DetailedBalance extends BaseSetings {
         $(byId("bannerReceipt")).shouldBe(visible);
 
         $(byClassName("payment-body__info")).shouldBe(visible);
+
+        if (link == "https://telecom.kz/ru/payment/322c/202311?ca=11430969") {
+            $(byXpath("//*[@class='payment-body__desktop-action']/button")).shouldBe(disabled);}
+
+        if (link == "https://telecom.kz/ru/payment/dabe/202311?ca=4015145") {
+            $(byXpath("//*[@class='payment-body__desktop-action']/button")).shouldNotBe(disabled);}
+
     }
 
     @Step("Проверка скачивания квитанции")
