@@ -16,7 +16,8 @@ import org.openqa.selenium.Keys;
 import telecom.pages.Adm;
 import telecom.testconfig.BaseSetings;
 
-public class AutoPaymentPage extends BaseSetings {
+public class
+AutoPaymentPage extends BaseSetings {
     @Step("Создание автооплаты")
     public void CreateAutoPayment() {
         GoToAutoPayment();

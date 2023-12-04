@@ -32,7 +32,7 @@ public class ОnboardingPage {
 
     @Step("Проверка конструктора пакета Keremet TV")
     public void CheckKeremetTVPackageSettings() {
-        $$(withText("Подробнее")).first().click();
+        $$(withText("Подключить")).first().click();
         $(byClassName("package-settings-form__settings__banner-keremet-tv")).shouldBe(visible);
         $(byClassName("package-settings-form__contract-term")).shouldBe(visible);
         $$(byCssSelector("[class*='active']")).get(9).shouldHave(text("3 года"));
