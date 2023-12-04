@@ -156,7 +156,8 @@ public class SmokeTest extends BaseSetings {
     @DisplayName("Проверка страницы мобильного приложения")
     public void checkMobile() {
         Adm adm = new Adm();
-        open("ru/");technicalWorks();
+        open("ru/");
+        technicalWorks();
         adm.mobilePage().CheckBody();
     }
 
@@ -179,7 +180,7 @@ public class SmokeTest extends BaseSetings {
         adm.logInLk2(login, password);
         adm.detailedBalance().PostPayCheck();
         pause(30000);
-        adm.logInLk2(login2, password2);
+        adm.logInLk2(login, password);
         adm.detailedBalance().PrePayCheck();
     }
 
