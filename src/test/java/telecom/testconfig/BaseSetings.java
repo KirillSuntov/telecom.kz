@@ -36,6 +36,9 @@ public class BaseSetings {
     protected String realnikitalogin= "7470370275";
     protected String realnikitapassword= "Test176063";
 
+    protected String login2= "7083413845";
+    protected String password2= "Test1234";
+
     public static String pageurl= "";
 
 
@@ -82,7 +85,7 @@ public class BaseSetings {
         Configuration.pageLoadTimeout=80000;
         Configuration.browserSize = "1300x1080";
 
-        Configuration.headless = true;
+        Configuration.headless = false;
         Configuration.holdBrowserOpen = false;
 
 

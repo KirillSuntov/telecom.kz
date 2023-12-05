@@ -180,7 +180,7 @@ public class SmokeTest extends BaseSetings {
         adm.logInLk2(login, password);
         adm.detailedBalance().PostPayCheck();
         pause(30000);
-        adm.logInLk2(login, password);
+        adm.logInLk2(login2, password2);
         adm.detailedBalance().PrePayCheck();
     }
 

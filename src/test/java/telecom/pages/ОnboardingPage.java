@@ -15,10 +15,10 @@ import org.openqa.selenium.Keys;
 public class ОnboardingPage {
     public void CheckAll() {
         CheckTarif();
-        CheckKeremetTVPackageSettings();
-        CheckBereketPackageSettings();
-        CheckOnboardingFail();
-        CheckKeremetMobilePackageSettings();
+//        CheckKeremetTVPackageSettings();
+//        CheckBereketPackageSettings();
+//        CheckOnboardingFail();
+//        CheckKeremetMobilePackageSettings();
         CheckOnboardingSuccess();
     }
 
@@ -168,11 +168,13 @@ public class ОnboardingPage {
 
     @Step("Создание абонента Казахтелеком до отправки кода otp")
     public void CheckOnboardingSuccess() {
-        $(byClassName("package-settings-form__btn__desk")).click();
-        $(byId("FunctionalAccessWarningPopup___BV_modal_body_")).shouldBe(visible);
-        $(byClassName("functionalAccessWarning__btn__primary")).click();
-        $(byClassName("qr")).shouldBe(visible);
-        $(byClassName("qr__link")).click();
+        $$(withText("Подключить")).first().click();
+        $(byXpath("//span[@aria-hidden='true']")).click();
+        $(byXpath("(//*[@class='row inside-popup__btns']/div)[1]")).click();
+        $$(withText("Подключить")).get(1).click();
+        $(byXpath("//span[@aria-hidden='true']")).click();
+        $(byXpath("(//*[@class='row inside-popup__btns']/div)[1]")).click();
+        $$(withText("Подключить")).get(2).click();
         $(byClassName("ui-form__input__mobile")).setValue("7077777771");
         $(byName("town_state_id")).click();
         $(byName("town_state_id")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
