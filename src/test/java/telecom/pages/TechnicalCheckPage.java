@@ -32,7 +32,7 @@ public class TechnicalCheckPage {
     public  void positiveCheck() {
 
 
-        open("technical-check");    technicalWorks();
+        open("ru/technical-check");    technicalWorks();
         $(byName("town_state_id")).setValue("Аст");
         pause(500);
         $$(byText("Астана")).last().click();
