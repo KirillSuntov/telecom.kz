@@ -36,6 +36,7 @@ public class DetailedBalance extends BaseSetings {
     public void checkTitle(String a) {
 
         pause(4000);
+        $$(byClassName("bigBlueThing__accounts__link")).first().click();
         $(byXpath("(//*[@class='btn-wrapper']/button)[1]")).click();
 
         if (a == "PostPay") {
