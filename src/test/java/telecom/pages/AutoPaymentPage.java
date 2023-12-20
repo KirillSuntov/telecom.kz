@@ -71,6 +71,7 @@ AutoPaymentPage extends BaseSetings {
     @Step("Проверка наличия уже существующего автоплатежа")
     public void HavingAutoPaymentCheck() {
 
+        open("ru/customer/auto-payment/");
         String name;
         name=$(byXpath("//*[@class='btn btn-secondary']")).getText();
 
