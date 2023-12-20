@@ -42,7 +42,7 @@ public class DetailedBalance extends BaseSetings {
         if (a == "PostPay") {
             $(byXpath("(//*[@class='title'])[3]")).shouldHave(text("Детали баланса"));
         } else {
-            pause(3000);
+            pause(5000);
             $(byXpath("(//*[@class='title'])[4]")).shouldHave(text("Детали баланса"));
         }
 
