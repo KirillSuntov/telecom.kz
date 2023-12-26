@@ -58,7 +58,7 @@ public class ResetPage extends SmsLogPage {
 //        System.out.println($(withText("Мобильный номер не верифицирован.")).getText());
         $(withText("Мобильный номер не верифицирован.")).click();
         $(withText("Мобильный номер не верифицирован."))
-                .$(byAttribute("href", "https://telecom.kz/ru/customer/verification/welcome?utm_source=link&utm_medium=lc&utm_campaign=verify")).click();
+                .$(byAttribute("href", "https://telecom.kz/ru/customer/verification/confirm-explanation")).click();
 
 
         webdriver().driver().switchTo().window(1);
