@@ -57,19 +57,19 @@ public class ResetPage extends SmsLogPage {
         $(by("type", "submit")).click();
 //        System.out.println($(withText("Мобильный номер не верифицирован.")).getText());
         $(withText("Мобильный номер не верифицирован.")).click();
-        $(withText("Мобильный номер не верифицирован."))
-                .$(byAttribute("href", "https://telecom.kz/ru/customer/verification/confirm-explanation")).click();
-
-
-        webdriver().driver().switchTo().window(1);
-        $(withText("Отсканируйте QR код с помощью мобильного телефона")).click();
-
-        $(withText("Другой способ")).click();
-
-//        open("ru/customer/verification/confirm-iin");
-//        $(byClassName("recaptcha-checkbox-border")).click();
-        $(byText("Продолжить")).click();
-        $(byText("Подтверждение личности")).click();
+//        $(withText("Мобильный номер не верифицирован."))
+//                .$(byAttribute("href", "https://telecom.kz/ru/customer/verification/confirm-explanation")).click();
+//
+//
+//        webdriver().driver().switchTo().window(1);
+//        $(withText("Отсканируйте QR код с помощью мобильного телефона")).click();
+//
+//        $(withText("Другой способ")).click();
+//
+////        open("ru/customer/verification/confirm-iin");
+////        $(byClassName("recaptcha-checkbox-border")).click();
+//        $(byText("Продолжить")).click();
+//        $(byText("Подтверждение личности")).click();
         pause(5000);
     }
 
