@@ -31,7 +31,8 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class BaseSetings {
     protected String login= "7070310740";
-    protected String password= "Test1234";
+    protected String password= "Zsdfer156559";
+
 
     protected String realnikitalogin= "7470370275";
     protected String realnikitapassword= "Test176063";

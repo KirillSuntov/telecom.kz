@@ -109,7 +109,7 @@ public class MainPage {
         CheckLinkFooter("Справочник", "catalog/11590/171757?utm_source=footer&utm_medium=org&utm_campaign=newlink", 4);
         CheckLinkFooter("Контакты и адреса", "pages/12263/172099?utm_source=footer&utm_medium=org&utm_campaign=newlink", 4);
         CheckLinkFooter("Публичный договор", "publications/172460?utm_source=footer&utm_medium=org&utm_campaign=newlink", 4);
-        CheckLinkFooter("Договора для ИП и ЮЛ", "https://www.ismet.kz/ru/documents/documents", 4);
+        //CheckLinkOut("Договора для ИП и ЮЛ", "https://www.ismet.kz/ru/documents/documents");
         CheckLinkFooter("Сертификат безопасности", "publication/172469", 4);
 
     }
