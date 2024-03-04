@@ -110,7 +110,7 @@ public class MainPageFromMobile {
         CheckLinkFooter("Справочник", "catalog/11590/171757?utm_source=footer&utm_medium=org&utm_campaign=newlink", 4);
         CheckLinkFooter("Контакты и адреса", "pages/12263/172099?utm_source=footer&utm_medium=org&utm_campaign=newlink", 4);
         CheckLinkFooter("Публичный договор", "publications/172460?utm_source=footer&utm_medium=org&utm_campaign=newlink", 4);
-        CheckLinkFooter("Договора для ИП и ЮЛ", "publication/172456", 4);
+//        CheckLinkFooter("Договора для ИП и ЮЛ", "publication/172456", 4);
         CheckLinkFooter("Сертификат безопасности", "publication/172469", 4);
 
     }
@@ -169,7 +169,7 @@ public class MainPageFromMobile {
         CheckLinkKk("Анықтамалық", "catalog/11590/171757?utm_source=footer&utm_medium=org&utm_campaign=newlink");
         CheckLinkKk("Байланыстар", "pages/12263/172099?utm_source=footer&utm_medium=org&utm_campaign=newlink");
         CheckLinkKk("Жария шарт", "publications/172460?utm_source=footer&utm_medium=org&utm_campaign=newlink");
-        CheckLinkKk("ЖК және ЗТ үшін шарттар", "publication/172456");
+//        CheckLinkKk("ЖК және ЗТ үшін шарттар", "publication/172456");
         CheckLinkKk("Қауіпсіздік сертификаты" , "publication/172469");
 
 
