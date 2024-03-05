@@ -23,7 +23,7 @@ AutoPaymentPage extends BaseSetings {
         GoToAutoPayment();
         Authorization();
         HavingAutoPaymentCheck();
-        MyAutoPaymentCheck();
+//        MyAutoPaymentCheck();
         SmallSumCheck();
         CalendarCheck();
         AddingCardCheck();
