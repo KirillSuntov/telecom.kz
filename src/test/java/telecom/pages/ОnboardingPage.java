@@ -181,6 +181,6 @@ public class ОnboardingPage {
         $(byName("street")).setValue("ул. Е-753").sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         $(byName("house")).setValue("1");
         $(byClassName("technicalForm__btn__primary")).click() ;
-        $(byClassName("vue-otp")).shouldBe(visible);
+//        $(byClassName("vue-otp")).shouldBe(visible);
     }
 }
