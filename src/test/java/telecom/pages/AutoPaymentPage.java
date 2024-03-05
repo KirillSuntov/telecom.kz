@@ -93,6 +93,10 @@ pause(5000);
         $(byXpath("//*[@class='t-input t-input--disabled']")).shouldHave(text("Отключен"));
         $(byXpath("//*[@class='info']")).shouldHave(text("Автоплатеж позволит Вам автоматически оплачивать услуги АО \"Казахтелеком\" каждый месяц на любую удобную Вам сумму"));
         $(byXpath("//*[@class='btn btn-secondary']")).click();
+        pause(5000);
+        if ($(withText("Выбор личевого счета")).is(visible)) {
+            $(withText("Продолжить")).click();
+        } ;
         $(byXpath("//div[@class='title']")).shouldHave(text("Создать автоплатеж"));
         $(byXpath("//*[@class='btn btn-primary disabled']")).shouldHave(text("Продолжить"));
 
