@@ -86,6 +86,9 @@ pause(5000);
     @Step("Проверка страницы 'Мой автоплатеж'")
     public void MyAutoPaymentCheck() {
 
+        if ($(withText("Выбор личевого счета")).is(visible)) {
+            $(withText("Продолжить")).click();
+        } ;
         $(byXpath("//div[@class='title']")).shouldHave(text("Мой автоплатеж"));
         $(byXpath("//*[@class='t-input t-input--disabled']")).shouldHave(text("Отключен"));
         $(byXpath("//*[@class='info']")).shouldHave(text("Автоплатеж позволит Вам автоматически оплачивать услуги АО \"Казахтелеком\" каждый месяц на любую удобную Вам сумму"));
