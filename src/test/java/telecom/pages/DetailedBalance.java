@@ -40,10 +40,10 @@ public class DetailedBalance extends BaseSetings {
         $(byXpath("(//*[@class='btn-wrapper']/button)[1]")).click();
 
         if (a == "PostPay") {
-            $(byXpath("(//*[@class='title'])[2]")).shouldHave(text("Детали баланса"));
+            $(byXpath("(//*[@class='title'])[1]")).shouldHave(text("Детали баланса"));
         } else {
-            pause(5000);
-            $(byXpath("(//*[@class='title'])[3]")).shouldHave(text("Детали баланса"));
+            pause(3000);
+            $(byXpath("(//*[@class='title'])[2]")).shouldHave(text("Детали баланса"));
         }
 
         $(byClassName("cards")).shouldBe(visible);
