@@ -49,7 +49,7 @@ AutoPaymentPage extends BaseSetings {
 
         open("ru/");
         $(byXpath("//*[@class='btn btn-with-icon main-menu__actions-item d-block']")).click();
-        $(byName("abonent_id")).setValue("60205");
+        $(byName("abonent_id")).setValue("11742426");
         $(byXpath("(//*[@class='btn btn-primary btn-block'])[1]")).click();
         $(byClassName("modal-info")).shouldBe(visible);
         pause(1000);
@@ -60,9 +60,9 @@ AutoPaymentPage extends BaseSetings {
     public void Authorization() {
 
         $(byXpath("//button[@class='button-primary defaultModal__btn']")).click();
-        $(byName("phone")).setValue(login);
+        $(byName("phone")).setValue(login2);
         $(by("type", "submit")).click();
-        $(byName("password")).setValue(password);
+        $(byName("password")).setValue(password2);
         $(by("type", "submit")).click();
         pause(1000);
 
@@ -106,6 +106,8 @@ pause(5000);
     @Step("Проверка ввода значения меньше минимально необходимого")
     public void SmallSumCheck() {
 
+        $(byXpath("//*[@class='btn btn-secondary']")).click();
+        $(byXpath("//*[@class='btn btn-primary']")).click();
         $(byXpath("(//*[@type='text'])[1]")).setValue("199");
         $(byXpath("//*[@class='t-input error']")).should(exist);
 

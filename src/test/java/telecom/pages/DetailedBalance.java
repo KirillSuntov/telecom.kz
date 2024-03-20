@@ -40,10 +40,10 @@ public class DetailedBalance extends BaseSetings {
         $(byXpath("(//*[@class='btn-wrapper']/button)[1]")).click();
 
         if (a == "PostPay") {
-            $(byXpath("(//*[@class='title'])[1]")).shouldHave(text("Детали баланса"));
+            $(byXpath("(//*[@class='title'])[3]")).shouldHave(text("Детали баланса"));
         } else {
             pause(3000);
-            $(byXpath("(//*[@class='title'])[2]")).shouldHave(text("Детали баланса"));
+            $(byXpath("(//*[@class='title'])[4]")).shouldHave(text("Детали баланса"));
         }
 
         $(byClassName("cards")).shouldBe(visible);
@@ -102,6 +102,9 @@ public class DetailedBalance extends BaseSetings {
         }
 
         $(byXpath("//*[@class='btn']")).shouldBe(visible);
+        $(byClassName("close-btn")).click();
+        $(byXpath("//*[@class='kt-icon kt-icon-person-with-border']")).click();
+        $(byXpath("(//*[@class='kt-nav__item_with-icon'])[2]")).click();
     }
 
 

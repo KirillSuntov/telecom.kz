@@ -37,8 +37,11 @@ public class BaseSetings {
     protected String realnikitalogin= "7470370275";
     protected String realnikitapassword= "Test176063";
 
-    protected String login2= "7787429127";
-    protected String password2= "Asdf4567";
+    protected String login2= "7786334772";
+    protected String password2= "Test1234";
+
+    protected String login3= "7083413845";
+    protected String password3= "Test1234";
 
     public static String pageurl= "";
 

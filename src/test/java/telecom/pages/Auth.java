@@ -26,21 +26,23 @@ public class Auth extends BaseSetings {
 
 //        $(byXpath("/html/body/div/div[2]/header/div[2]/div[2]/div/div[1]/a/span")).click();
         $(byText("Вход")).click();
-        pause(5000);
+//        pause(5000);
         technicalWorks();
 
-        if ($(byClassName("kt-nav__person")).isDisplayed()) {
-            $(byClassName("kt-nav__person")).click();
-            $$(byClassName("kt-nav__item_with-icon")).last().click();
-            Selenide.clearBrowserCookies();
-            Selenide.clearBrowserLocalStorage();
-            refresh();
-            pause(2000);
-//            open("ru/");
-            $(byText("Вход")).click();
-        }
-        $(byName("phone")).setValue(login);
+//        if ($(byClassName("kt-nav__person")).isDisplayed()) {
+//            $(byClassName("kt-nav__person")).click();
+//            $$(byClassName("kt-nav__item_with-icon")).last().click();
+//            Selenide.clearBrowserCookies();
+//            Selenide.clearBrowserLocalStorage();
+//            refresh();
+//            pause(2000);
+////            open("ru/");
+//            $(byText("Вход")).click();
+//        }
+        $(byClassName("login-link")).click();
         System.out.println(webdriver().driver().url());
+        $(byId("phone")).click();
+        $(byId("phone")).setValue(login);
         $(by("type", "submit")).click();
         $(byName("password")).setValue(password);
         System.out.println(webdriver().driver().url());

@@ -53,6 +53,7 @@ public class ResetPage extends SmsLogPage {
     public void verification() {
         open("ru/");technicalWorks();
         $(byText("Вход")).click();
+        $(byClassName("login-link")).click();
         $(byName("phone")).setValue("7070310755");
         $(by("type", "submit")).click();
 //        System.out.println($(withText("Мобильный номер не верифицирован.")).getText());
